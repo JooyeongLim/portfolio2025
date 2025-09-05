@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트2</title>
+    <!-- 외부스타일시트 연결-->
+
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="0905.css">
+
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquqery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+ 
+
+
+    <!-- 외부스크립트 연결 -->
+    <script src="0905.js"></script>
+
+    <!-- 폰트어썸 CDN -->
+    <script src="https://kit.fontawesome.com/5b60675eee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="shopping">
+        <p class="icon"><i class="fa-solid fa-basket-shopping"></i><span>0</span></p>
+        <div class="cart_page">
+            <p>장바구니</p>
+            <div class="cartSet">
+                <ul>
+                    <li>
+                        <span>상품정보</span>
+                        <span>옵션</span>
+                        <span>금액</span>
+                        <span>갯수</span>
+                    </li>
+                </ul>
+                <hr>
+                <div>
+                    <p>총 상품금액 : <em>00</em> 원 </p>
+                    <p>총 배송비 : <em>00</em> 원 </p>
+                    <p>총 주문금액 : <em>00</em> 원 </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="hero">
+        <div class="head">
+            <div class="top">
+                <h1 class="logo"><a href=""><img src="img/landing/landing_logo.png" alt=""></a></h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="">MENU</a>
+                            <div></div>
+                        </li>
+                        <li><a href="">STORY</a>
+                            <div></div>
+                        </li>
+                        <li><a href="">NEWS</a>
+                            <div></div>
+                        </li>
+                        <li><a href="">COMPANY</a>
+                            <div></div>
+                        </li>
+                        <li><a href="">COMMUNITY</a>
+                            <div></div>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="util">
+                    <ul>
+                        <li><a href="">장바구니</a></li>
+                        <li><a href="">로그인/ 회원가입</a></li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+
+
+
+    <div id="wrap">
+        <section class="landing_main">
+            <div class="landing">
+                <div class="bigImg"></div>
+                <div class="center_b">
+                    <img src="img/landing/landing_combo.png" alt="">
+                </div>
+                <div class="txt">
+                    <div class="txtInner">
+                        <p>새로운 시즌!</p>
+                        <h2>Wendy’s App 출시! <br>
+                            어디에서든 쉽게, 지금 바로 주문하세요!</h2>
+                        <p>인기 메뉴를 할인된 가격에 구매 하고 
+                            무료로 받을 수 있는 다양한 방법을 제공합니다.</p>
+                        <div class="plus_btn">
+                            <a href=""> + </a>
+                            <p>EVENT MENU MORE HERE!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="landing_num">
+                    <p>01</p>
+                </div>
+                <div class="landing_cir">
+                    <ul>
+                        <li>
+                            <p>prev</p>
+                        </li>
+                        <li>
+                            <p>next</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="menu">
+            <h2>WENDY'S BEST</h2>
+            <div class="menu_inner">
+
+                <div class="left">
+                    <div class="m_select">
+                        <div class="icon">
+                            <P><i class="fa-solid fa-heart"></i></P>
+                            <P><i class="fa-solid fa-basket-shopping cartIcon"></i></P>
+                        </div>
+                        <ul>
+                            <li>콤보
+                                <div></div>
+                            </li>
+                            <li>아침식사
+                                <div></div>
+                            </li>
+                            <li>이벤트
+                                <div></div>
+                            </li>
+                            <li>싱글버거
+                                <div></div>
+                            </li>
+                            <li>샐러드
+                                <div></div>
+                            </li>
+                            <li>사이드
+                                <div></div>
+                            </li>
+                            <li>음료
+                                <div></div>
+                            </li>
+                        </ul>
+                        <img src="img/menu/menu_main001.png" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="m_name">
+                        <h3>데이브 버거</h3>
+                        <p>신선한 소고기 1/4파운드*, 아메리칸 치즈, 아삭한 양상추, 토마토, 피클, 케첩, 마요네즈, 양파를 구운 빵에 얹은, 웬디스의 초창기 버거 맛입니다. 일부
+                            매장에서는
+                            머스터드를 추가하기도 합니다.</p>
+                    </div>
+                    <div class="m_allergy">
+                        <h3>알레르기 유발성분</h3>
+                        <p>계란, 우유, 대두, 밀, 참깨</p>
+                    </div>
+                    <div class="m_label">
+                        <h3>영양 성분표</h3>
+                        <ul class="top">
+                            <li>칼로리</li>
+                            <li>총지방</li>
+                            <li>나트륨</li>
+                            <li>탄수화물</li>
+                            <li>단백질</li>
+                            <li>칼슘</li>
+                        </ul>
+                        <ul class="bottom">
+                            <li>430kcal</li>
+                            <li>36g</li>
+                            <li>1080mg</li>
+                            <li>35g</li>
+                            <li>40g</li>
+                            <li>15%DV</li>
+                        </ul>
+                    </div>
+                    <div class="m_btn">
+                        <ul>
+                            <li>&lt;</li>
+                            <li>&gt; </li>
+                        </ul>
+                    </div>
+                    <div class="m_train">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-basket-shopping cartIcon"></i>
+                                <img src="img/menu/menu_mini001.png" alt="">
+                                <p>베이컨버거</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-basket-shopping cartIcon"></i>
+                                <img src="img/menu/menu_mini002.png" alt="">
+                                <p>주니어 베이컨버거</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-basket-shopping cartIcon"></i>
+                                <img src="img/menu/menu_mini003.png" alt="">
+                                <p>트리플 데이브 버거</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-basket-shopping cartIcon"></i>
+                                <img src="img/menu/menu_mini004.png" alt="">
+                                <p>주니어 치즈버거</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-basket-shopping cartIcon"></i>
+                                <img src="img/menu/menu_mini005.png" alt="">
+                                <p>스파이시 치킨버거</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-basket-shopping cartIcon"></i>
+                                <img src="img/menu/menu_mini006.png" alt="">
+                                <p>소시지& 치즈머핀</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu_bg"></div>
+            </div>
+        </section>
+
+
+
+        <section class="groupBox">
+            <div class="topline"></div>
+            <div class="inner">
+                <div class="left">
+                    <ul>
+                        <li><img src="img/group/group_side001.png" alt=""></li>
+                        <li><img src="img/group/group_side002.png" alt=""></li>
+                        <li><img src="img/group/group_side003.png" alt=""></li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/group/group_side004.png" alt=""></li>
+                        <li><img src="img/group/group_side005.png" alt=""></li>
+                        <li><img src="img/group/group_side006.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="center">
+                    <div class="txt">
+                        <i class="fa-solid fa-burger"></i>
+                        <h3>우리는 더 나은 Wendy’s를 위해 매일 노력합니다</h3>
+                        <p>50년이 지난 지금도, 옳은 일을 옳은 방식으로 하는 것은 여전히 회사와 기업의 사회적 <br>
+                            책임에 대한 우리의 접근 방식을 이끄는 핵심입니다. <br>
+                            바로 '옳은 일을 올바르게 행하는 것'입니다. </p>
+                    </div>
+                    <div class="boxes">
+                        <ul>
+                            <li>
+                                <img src="img/group/group_center001.png" alt="">
+                                <h3>음식</h3>
+                                <p>고품질, 안전, 그리고 책임감 있는 공급원으로부터 생산된 신선 식품을 제공하는 데 최선을 다하고 있습니다.</p>
+                                <p><a href="">자세히 알아보기 ></a></p>
+                            </li>
+                            <li class="on">
+                                <img src="img/group/group_center002.png" alt="">
+                                <h3>사람들</h3>
+                                <p>직원들의 전문적인 성장을 지원하고 소통하는 기업 문화를 조성하기 위해 노력합니다.</p>
+                                <p><a href="">자세히 알아보기 ></a></p>
+                            </li>
+                            <li>
+                                <img src="img/group/group_center003.png" alt="">
+                                <h3>지속가능성</h3>
+                                <p>우리는 환경에 미치는 영향을 줄이기 위해 노력하며, 그 과정의 진행 상황을 측정하고 기록합니다. </p>
+                                <p><a href="">자세히 알아보기 ></a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><img src="img/group/group_side004.png" alt=""></li>
+                        <li><img src="img/group/group_side005.png" alt=""></li>
+                        <li><img src="img/group/group_side006.png" alt=""></li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/group/group_side001.png" alt=""></li>
+                        <li><img src="img/group/group_side002.png" alt=""></li>
+                        <li><img src="img/group/group_side003.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomletter"></div>
+            <div class="bottomline"></div>
+        </section>
+
+
+        <section class="valueBox">
+            <div class="txt">
+                <h3>우리가 추구하는 가치</h3>
+                <p>Wendy’s는 지속가능한 상품과 서비스를 제공하고 모두에게 더욱 공평한 세상을 만들기 위해 노력합니다. <br>
+                    우리는 유엔 지속가능개발목표(SDGs)에 맞춰 노력을 기울이고 있습니다. <br>
+                    지속가능개발목표는 17가지 주요 글로벌 이슈를 우선순위로 정하고, 다음과 같은 영향 영역에 집중하는 프레임워크입니다.
+                </p>
+                <span></span>
+            </div>
+            <div class="valueImg">
+                <ul class="first">
+                    <li>
+                        <div class="chat"><img src="img/value/value_chat001.png" alt=""></div>
+                        <div class="circle">
+                            <img src="img/value/value_001.png" alt="">
+                            <p>제로 헝거</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="chat"><img src="img/value/value_chat002.png" alt=""></div>
+                        <img src="img/value/value_002.png" alt="">
+                        <p>일자리와 경제 성장</p>
+                    </li>
+                    <li>
+                        <div class="chat"><img src="img/value/value_chat003.png" alt=""></div>
+                        <img src="img/value/value_003.png" alt="">
+                        <p>불평등 감소</p>
+                    </li>
+                    <li>
+                        <div class="chat"><img src="img/value/value_chat004.png" alt=""></div>
+                        <img src="img/value/value_004.png" alt="">
+                        <p>목표를 위한 파트너십</p>
+                    </li>
+                </ul>
+                <ul class="second">
+                    <li>
+                        <div class="chat"><img src="img/value/value_chat005.png" alt=""></div>
+                        <img src="img/value/value_005.png" alt="">
+                        <p>책임있는 소비와 생산</p>
+                    </li>
+                    <li>
+                        <div class="chat"><img src="img/value/value_chat006.png" alt=""></div>
+                        <img src="img/value/value_006.png" alt="">
+                        <p>기후 행동</p>
+                    </li>
+                    <li>
+                        <div class="chat"><img src="img/value/value_chat007.png" alt=""></div>
+                        <img src="img/value/value_007.png" alt="">
+                        <p>생명 존중</p>
+                    </li>
+                    <li>
+                        <div class="chat"><img src="img/value/value_chat008.png" alt=""></div>
+                        <img src="img/value/value_008.png" alt="">
+                        <p>산업, 혁신, 인프라</p>
+                    </li>
+                </ul>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <section class="timeBox">
+            <div class="inner">
+                <div class="head">
+                    <h3>Wendy's 타임라인</h3>
+                    <p>웬디스는 음식의 품질을 최우선으로 생각하며, 지속적인 발전을 향한 여정에서 수많은 이정표를 기념해 왔습니다. <br>
+                        지난 세월 동안 웬디스가 이뤄낸 가장 자랑스러운 성과들을 살펴보세요.</p>
+                </div>
+                <div class="lineBox">
+                    <ul>
+                        <li>
+                            <div class="yearBox"><img src="img/time/time_year001.png" alt=""></div>
+                            <div class="conBox">
+                                <div class="txt">
+                                    <h3>첫 번째 Wendy's 오픈</h3>
+                                    <p>여정의 시작 - 1969년 11월 15일, 데이브 토마스는 오하이오주 콜럼버스 이스트 브로드 스트리트 257번지에 첫 번째 웬디스 레스토랑을
+                                        열었습니다.
+                                        웬디스는 곧 신선한 소고기로 만든 사각 패티와 상징적인 프로스티 x 디저트로 유명해졌습니다.</p>
+                                    <p><a href="">자세히 알아보기 ></a></p>
+                                </div>
+                                <div class="img"><img src="img/time/time_pic001.png" alt=""></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="yearBox"><img src="img/time/time_year002.png" alt=""></div>
+                            <div class="conBox">
+                                <div class="txt">
+                                    <h3>웬디스 1,000호점 오픈</h3>
+                                    <p>웬디스의 1,000 번째 레스토랑이 테네시주 스프링필드에
+                                        문을 열었고, 불과 100개월 만에 회사의 1,000 번째
+                                        레스토랑이라는 기록을 세웠습니다.
+
+                                        또한 웬디스는 70년대 초반, 세계 최초의 현대식 드라이브 스루를 선보였습니다</p>
+                                    <p><a href="">자세히 알아보기 ></a></p>
+                                </div>
+                                <div class="img">
+                                    <img src="img/time/time_pic002.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="yearBox"><img src="img/time/time_year003.png" alt=""></div>
+                            <div class="conBox">
+                                <div class="txt">
+                                    <h3>Wendy’s의 창립자는 입양을 위한 <br> 데이브 토마스 재단을 설립했습니다.</h3>
+                                    <p>저희 설립자 데이브 토마스는 어렸을 때 입양되어,
+                                        모든 아이는 사랑으로 가득한 가정을 가질 자격이 있다고 믿었기에 데이브 토마스 입양재단(DTFA)을 설립했습니다. <br>
+                                        <br>
+
+                                        1994년 11월 - 웬디스의 창립 25주년을 맞이합니다.
+                                        이 당시 전체 매출이 42억 달러로 역대 최고 기록을 세웠습니다.
+                                    </p>
+                                    <p><a href="">자세히 알아보기 ></a></p>
+                                </div>
+                                <div class="img">
+                                    <img src="img/time/time_pic003.png" alt="">
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="yearBox"><img src="img/time/time_year004.png" alt=""></div>
+                            <div class="conBox">
+                                <div class="txt">
+                                    <h3>옳은 것을 올바르게 하는 목표</h3>
+                                    <p>웬디스는 Good Done Right를 새로운 슬로건으로 식품, 사람, 환경 발자국이라는 세 가지 핵심 사업 영역을 제시했습니다.
+                                        웬디스는 최초로 환경, 사회, 지배구조(ESG) 주제에 대한 중요성 평가를 실시하게 됩니다. <br>
+                                        <br>
+
+                                        2021년 11월 - 1,000번째 해외 지점 설립
+                                        2022년 03월 - 7,000번째 매장 오픈.
+                                    </p>
+                                    <p><a href="">자세히 알아보기 ></a></p>
+                                </div>
+                                <div class="img">
+                                    <img src="img/time/time_pic004.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo"><img src="img/time/time_logo.png" alt=""></div>
+            </div>
+
+        </section>
+
+        <section class="eventBox">
+            <div class="line">
+                <p><em>WENDY'S & Wendnesday’s Collaboration! WENDY'S & Wendnesday’s Collaboration! WENDY'S &
+                        Wendnesday’s
+                        Collaboration! WENDY'S & Wendnesday’s Collaboration! WENDY'S & Wendnesday’s Collaboration!
+                        WENDY'S &
+                        Wendnesday’s Collaboration!</em></p>
+            </div>
+            <div class="line2">
+                <p><em>WENDY'S & Wendnesday’s Collaboration! WENDY'S & Wendnesday’s Collaboration! WENDY'S &
+                        Wendnesday’s
+                        Collaboration! WENDY'S & Wendnesday’s Collaboration! WENDY'S & Wendnesday’s Collaboration!
+                        WENDY'S &
+                        Wendnesday’s Collaboration!</em></p>
+            </div>
+            <img src="img/event/event_01.png" alt="" class="img01">
+            <!-- <img src="img/event/event_02.png" alt="" class="img02"> -->
+            <img src="img/event/event_03.png" alt="" class="img03">
+            <div class="eventBox_inner">
+                <div class="main">
+                    <div class="content">
+                        <div class="logo"><img src="img/event/event_logo.png" alt=""></div>
+                        <div class="con">
+                            <h3>Wellcome Misfortune!</h3>
+                            <p>오싹하지만 사랑스러운 그녀와, 언제나 맛있는 웬디스의 특별한 콜라보! <br>
+                                지금만 만나볼 수 있는 스페셜 메뉴와 함께, 다크한 매력에 푹 빠져보세요.
+                                닭가슴살을 통째로 갈아 바삭하게 튀긴 완벽한 치킨을 원하는 소스와 함께 즐겨보세요. 가끔은 너겟이 필요할 때가 있죠.
+                            </p>
+                            <p class="btn"><a>ORDER NOW</a></p>
+
+                        </div>
+                    </div>
+                </div>
+                <img src="img/event/event_&.png" alt="" class="and">
+            </div>
+
+        </section>
+
+
+
+        <section class="reviewBox">
+            <div class="review_inner">
+                <div class="left">
+                    <div class="pic">
+                        <ul>
+                            <li><img src="img/review/review_pic001.png" alt=""></li>
+                            <li><img src="img/review/review_pic002.png" alt=""></li>
+                            <li><img src="img/review/review_pic003.png" alt=""></li>
+                            <li><img src="img/review/review_pic004.png" alt=""></li>
+                            <li><img src="img/review/review_pic005.png" alt=""></li>
+                            <li><img src="img/review/review_pic006.png" alt=""></li>
+                        </ul>
+                        <!-- <ul>
+                                <li>
+                                    <div class="arrow left">&lt;</div>
+                                    <div class="arrow right">&gt;</div>
+                                </li>
+                            </ul> -->
+                    </div>
+                    <div class="slide">
+                        <ul>
+                            <li class="on">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2>후기<span>1,980</span></h2>
+                    <p>Wendy's와 함께한 여러분의 이야기를 들려주세요!</p>
+                    <p class="btn"><a>Write a Review</a></p>
+
+                    <div class="search">
+                        <input type="text" placeholder="Search Reviews">
+                        <p><a href="">VIEW ALL→</a></p>
+                    </div>
+                    <hr class="top_line">
+                    <ul>
+                        <li>
+                            <div class="p1">
+                                <div class="person">
+                                    <p>박찬호</p>
+                                    <p>★★★★★</p>
+                                    <p>1일 전 방문</p>
+                                    <p>Dave's 더블 콤보<br>
+                                        밀크쉐이크
+                                    </p>
+                                </div>
+                                <span></span>
+                                <div class="txt">
+                                    <p>냉동패티를 사용하지 않아서 좋아요!</p>
+                                    <hr>
+                                    <p class="details">More Details</p>
+                                    <p>양상추, 토마토, 피클, 치즈, 빵으로 자극적이거나 짜지 않아서 좋았어요! 패티도 두툼한데 더블로 시켰더니 풍미가
+                                        좋았습니다. 프로모션 카드가 있어서 할인도 받을 수 있었어요. 할인....</p>
+                                    <p class="more"><a href="">VIEW ALL MORE→</a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <div></div>
+                        <li>
+                            <div class="p1">
+                                <div class="person">
+                                    <p>이유리</p>
+                                    <p>★★★★★</p>
+                                    <p>3일 전 방문</p>
+                                    <p>프레첼 버거<br>
+                                        프렌치 프라이
+                                    </p>
+                                </div>
+                                <span></span>
+                                <div class="txt">
+                                    <p>고기패티 모양이 네모난게 신기해요..</p>
+                                    <hr>
+                                    <p class="details">More Details</p>
+                                    <p>안에 든 재료와 소스가 특이해요 베이컨이랑 튀긴 양파가 들어가있어서 맛이 특별하게 느껴집니다. 프라이도 갓
+                                        튀겨서 맛있고 드라이블 스루로도 자주 가는데 이번에 어플이....</p>
+                                    <p class="more"><a href="">VIEW ALL MORE→</a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <div></div>
+                        <li>
+                            <div class="p1">
+                                <div class="person">
+                                    <p>함성태</p>
+                                    <p>★★★★★</p>
+                                    <p>4일 전 방문</p>
+                                    <p>모닝콤보<br>
+                                        치즈스틱
+                                    </p>
+                                </div>
+                                <span></span>
+                                <div class="txt">
+                                    <p>아침에 간편하게 먹기 좋아요</p>
+                                    <hr>
+                                    <p class="details">More Details</p>
+                                    <p>아침에 시간이 없을때 모닝콤보 하나로 해결할 수 있어요. 사이드 메뉴랑 커피도 잘 어울려서
+                                        시간없을때 간편히 먹기 좋아요. 출근할때마다 웬디스의 모닝콤보만 있다면...</p>
+                                    <p class="more"><a href="">VIEW ALL MORE→</a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <div></div>
+                        <li>
+                            <div class="p1">
+                                <div class="person">
+                                    <p>김지수</p>
+                                    <p>★★★★★</p>
+                                    <p>6일 전 방문</p>
+                                    <p>크리스피 치킨<br>
+                                        아메리카노
+                                    </p>
+                                </div>
+                                <span></span>
+                                <div class="txt">
+                                    <p>치킨버거 다리살이 정말 부드러워요!</p>
+                                    <hr>
+                                    <p class="details">More Details</p>
+                                    <p>웬디스의 치킨버거는 최고에요! 냉동이 아니라 신선한 재료를 사용해서
+                                        느낌을 받아요. 토마토와 양상치, 그리고 다양한 소스들도 매력적....
+                                    </p>
+                                    <p class="more"><a href="">VIEW ALL MORE→</a></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <footer class="copyright">
+            <div class="inner">
+                <p>
+                    본 페이지는 포트폴리오 용으로 제작된 사이트입니다.
+                    해당 사이트의 이미지와 동영상 기타 상세내용은 상업적으로 사용하지 않습니다.
+                </p>
+                <br>
+                <p>copyright &copy; 2025.green310.All Rights Reserved.</p>
+            </div>
+
+        </footer>
+    </div>
+
+    <div id="sub01">
+        서브페이지 1번입니다
+    </div>
+
+    <section class="loginBox">
+        <div class="inner">
+            <div class="main_btn">
+                <p><a href="">&lt; 뒤로가기</a></p>
+                <span></span>
+                <ul>
+                    <li>홈</li>
+                    <li>&gt;</li>
+                    <li>로그인</li>
+                </ul>
+            </div>
+            <div class="main_input">
+                <div class="head">
+                    <p class="title">Hello :) <br>
+                        This is <em>Wendy's.</em></p>
+                    <p class="content">로그인해서 우리와 함께하세요! 맛있는 메뉴들이 당신을 기다리고 있습니다. </p>
+                </div>
+                <div class="inputGroup">
+                    <ul>
+                        <li>
+                            <!-- <label for="userId">아이디</label> -->
+                            <input type="text" id="userId" placeholder="아이디를 입력하세요" required>
+                        </li>
+                        <li>
+                            <!-- <label for="userPw">비밀번호</label> -->
+                            <input type="password" id="userPw" placeholder="비밀번호를 입력하세요" required>
+                        </li>
+                        <li>
+                            <button type="submit" class="loginBtn">로그인하기</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <div class="find">
+                        <ul>
+                            <li><a href="">아이디 찾기</a></li>
+                            <li><a href="">비밀번호 찾기</a></li>
+                            <li><a href="">회원가입</a></li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <div class="login">
+                        <ul>
+                            <li>SNS 계정으로 로그인</li>
+                            <li id="naverIdLogin"></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var naverLogin = new naver.LoginWithNaverId({
+        clientId: "59LPpCAXMEPMLI5Qf0WL", // 여기에 클라이언트 ID 입력
+        callbackUrl: "YOUR_CALLBACK_URL", // 콜백 URL 입력
+        isPopup: false, // 팝업을 통한 연동처리 여부
+        loginButton: {color: "green", type: 3, height: 35} // 로그인 버튼의 타입을 지정
+    });
+
+    naverLogin.init();
+
+    </script>
+
+</body>
+
+</html>

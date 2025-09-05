@@ -1,0 +1,1256 @@
+/* 언어설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 전체설정 */
+* {padding: 0;
+    margin: 0;}
+
+ul, ol {list-style: none;}
+a {text-decoration: none;
+    color: #333;}
+img {border: none;
+    vertical-align: bottom;}
+body {font-size: 15px;
+         overflow-x: hidden;}
+
+/* 헤더설정 */
+.hero {width: 100%;
+        position: relative;}
+.hero .head {width: 100%;
+                min-width: 1200px;
+                height: 80px;
+                position: absolute;}
+.head .top {display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                left: 10px;
+                top: 20px;
+                z-index: 999;}
+.head .logo {width: 25%;
+            position: fixed;
+                top: 1px;
+                left: 50px;}
+.head .logo a {}
+.head .logo a img {width: 100px;
+                height: 100px;}
+
+.head .gnb {width: 50%;
+            position: fixed;
+            left: 30%;
+            top: 30px;
+            }
+.head .gnb ul {display: flex;
+                        justify-content: right;
+                        align-items: baseline;
+                }
+.head .gnb ul li {margin-right: 100px;
+                position: relative;
+                cursor: pointer;}
+.head .gnb ul li a {display: block;
+                        color: #333;
+                        font-weight: bold;}
+.head .gnb ul li div {}
+.head .gnb ul li:nth-child(1) div,
+.head .gnb ul li:nth-child(2) div,
+.head .gnb ul li:nth-child(3) div {position: absolute;
+                                        top: -2px;
+                                        left: -10px;
+                                        width: 65px;
+                                        height: 0;
+                                        transition: all 0.5s;
+                                        border-top: 2.5px solid #333;
+                                        border-bottom : 2.5px solid #333;
+                                        opacity: 0;
+                                        }
+.head .gnb ul li:nth-child(4) div {position: absolute;
+                                top: -2px;
+                                left: -10px;
+                                width: 95px;
+                                height: 0;
+                                transition: all 0.5s;
+                                border-top: 2.5px solid #333;
+                                border-bottom : 2.5px solid #333;
+                                opacity: 0;
+                                }
+.head .gnb ul li:nth-child(5) div {position: absolute;
+                                top: -2px;
+                                left: -12px;
+                                width: 115px;
+                                height: 0;
+                                transition: all 0.5s;
+                                border-top: 2.5px solid #333;
+                                border-bottom : 2.5px solid #333;
+                                opacity: 0;
+                                }
+.head .gnb ul li:hover div {opacity: 1;
+                        height: 100%;}
+
+
+.util {width: 25%;
+        position: fixed;
+        right: 10px;
+        top: 30px;}
+.util ul {display: flex;
+                justify-content: flex-end;}
+.hero .util ul li {padding-right: 10px;}
+.hero .util ul li a {display: block;
+                        color: #333;
+                        font-weight: bold;}
+
+
+/* 첫번째 landing 설정 #####################################*/
+.lnading_main {width: 100%;
+        height: 100vh;}
+.landing {display: flex;
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                overflow: hidden;}
+.landing .bigImg {width: 50%;
+                        height: 100%;
+                        background-color: #bbb;
+                        background-image: url(img/landing/landing_bg_big.jpg);
+                        background-size: cover;
+                        background-position: center center;}
+
+.landing .center_b {position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 500px;
+                height: 500px;
+                margin-left: -250px;
+                margin-top: -250px;}                       
+.landing .center_b img {width: 100%;}                       
+.landing .txt {width: 50%;
+                height: 100%;
+                background-color: #E61433;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;}
+.landing .txt .txtInner {padding-top: 300px;
+                            padding-left: 200px;}
+.landing .txt p {font-size: 15px;}
+.landing .txt h2 {font-size: 30px;
+                padding-bottom: 5px;
+                color: #fff;}
+
+.landing .plus_btn {display: flex;
+                       align-items: center;
+                        margin-top: 30px;
+                        cursor: pointer;}
+.landing .plus_btn a {width: 50px;
+                        height: 50px;   
+                        border-radius: 50%;
+                        border: 2px dashed #fff;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                                align-items: center;
+                                font-size: 36px;
+                                padding-bottom: 5px;
+                                box-sizing: border-box;
+                                margin-right: 20px;
+                                
+                        }
+
+.landing .plus_btn p {font-weight: bold;
+                        color: #fff;}
+
+.landing .landing_num {width: 80px;
+                        height: 80px;
+                        background-color: #E2203D;
+                        border-radius: 50%;
+                        position: absolute;
+                        z-index: 888;
+                        bottom: 50px;
+                        left: 50%;
+                        margin-left: -45px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);}
+.landing .landing_num p {display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 30px;
+                        color: #fff;
+                        padding-top: 15px;
+                        padding-left: 2px;}
+
+.landing .landing_cir {width: 200px;
+                        height: 200px;
+                        background-color: rgba(255, 255, 255, 0.5);
+                        border-radius: 50%;
+                        position: absolute;
+                        z-index: 887;
+                        bottom: -100px;
+                        left: 50%;
+                        margin-left: -100px;}
+.landing .landing_cir ul {display: flex;
+                        justify-content: space-between;
+                        align-items: center;}
+.landing .landing_cir ul li {width: 80%;
+                                color: #fff;
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-left: 28px;
+                                margin-top: 50px;
+                                cursor: pointer;}
+
+
+/* 두번째 menu 설정#################################### */
+.menu {width: 100%;
+        height: 100vh;
+        padding: 90px 0;
+        box-sizing: border-box;
+        position: relative;}
+.menu h2 {font-size: 50px;
+        margin-bottom: 10px;
+        width: 80%;
+        min-width: 1200px;
+        margin: 0 auto;
+        font-family: "Monoton", sans-serif;
+        color: #E2203D;
+        font-style: normal;
+        font-weight: 500;}
+.menu .menu_inner {display: flex;
+                    width: 80%;
+                    min-width: 1200px; 
+                    margin: 0 auto;}
+.menu .left {width: 40%;}
+.menu .left .m_select {}
+.menu .left .m_select .icon {display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                margin-right: 35px;
+                                margin-top: 20px;}
+.menu .left .m_select .icon p {margin-left: 10px;
+                                }
+.menu .left .m_select .icon p i {font-size: 25px;
+                                color: #fff;
+                                -webkit-text-stroke: 1px #E2203D;
+                                cursor: pointer;}
+.menu .left .m_select .icon p i:hover {color: #E2203D;}
+.menu .left .m_select ul {}
+.menu .left .m_select ul li {font-size: 20px;
+                                color: #fff;
+                                margin-left: 35px;
+                                margin-top: 20px;}
+.menu .left .m_select img {width: 570px;
+                        height: 570px;
+                                position: absolute;
+                                top: 220px;
+                                left: 300px;
+                                  opacity: 0;
+                                transform: translateX(-130px);
+                                transition: all 1.2s ease-in;}
+
+.menu .left .m_select img.on {
+                                opacity: 1;
+                                transform: translateX(0);
+}
+
+.menu .left ul li {position: relative;
+                /* background-color: #199FDA; */
+        }
+
+.menu .left ul li div {position: absolute;
+                       left: 30px;               
+                        width:0;
+                        height: 100%;                  
+                        transition: all 0.5s;
+                        border-left: 2px solid #fff;
+                        border-right: 2px solid #fff;
+                        top: 0;
+                        opacity: 0;}
+
+
+
+.menu .left ul li:nth-child(1):hover div ,
+.menu .left ul li:nth-child(7):hover div {opacity: 1;
+                                        width: 100px;
+                                        margin-left: -65px;}
+.menu .left ul li:nth-child(2):hover div,
+.menu .left ul li:nth-child(4):hover div{opacity: 1;
+                                        width: 100px;
+                                        margin-left: -45px;}
+
+.menu .left ul li:nth-child(3):hover div,
+.menu .left ul li:nth-child(5):hover div,
+.menu .left ul li:nth-child(6):hover div{opacity: 1;
+                                        width: 100px;
+                                        margin-left: -56px;}
+.menu .left ul li:hover {cursor: pointer;}
+
+
+.menu .right {width: 60%;
+                height: 100%;
+                padding: 10px 0;
+                margin-left: 0px;
+                overflow: hidden;
+        }
+.menu .right .m_name, .menu .right .m_allergy,.menu .right .m_label {margin-bottom: 30px;}
+.menu .right .m_name h3,.menu .right .m_allergy h3 {font-size: 20px;
+                        color: #E61433;
+                        font-weight: bold;}
+.menu .right .m_name p,.menu .right .m_allergy p {font-size: 15px;}
+
+
+.menu .right .m_label h3 {font-size: 20px;
+                        color: #E61433;
+                        font-weight: bold;
+                        padding-bottom: 5px;}
+.menu .right .m_label ul {display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 5px;
+                            box-sizing: border-box;
+                                }
+.menu .right .m_label ul li {font-size: 15px;
+                                text-align: center;
+                                width: 150px;}
+
+.menu .right .m_label ul.top {border-top:2px solid #E2203D;
+                                border-bottom: 1px solid #E2203D;
+                                padding: 8px 0;}
+.menu .right .m_label ul.bottom {border-bottom:1px solid #ddd;
+                                padding: 10px 0;}
+
+.menu .right .m_btn {}
+.menu .right .m_btn ul {display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        }
+.menu .right .m_btn ul li {font-size: 20px;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            text-align: center;
+                            cursor: pointer;
+                            z-index: 11;
+                        }
+.menu .right .m_btn ul li:nth-child(1) {background-color: #199FDA;
+                                        color: #fff;
+                                        border: 1px solid #045B82;
+                                        cursor: pointer;}
+.menu .right .m_btn ul li:nth-child(2) {border: 1px solid #045B82;
+                                        color: #045B82;
+                                        background-color: #fff;
+                                        cursor: pointer;}
+.menu .right .m_btn ul li:nth-child(2):hover {background-color: #199FDA;
+                                                color: #fff;}
+
+
+.menu .right .m_train {margin-top: 10px;}
+.menu .right .m_train ul {display: flex;
+                        position: relative;
+                        
+                        width: 100%;
+                        height: 100%;}
+.menu .right .m_train ul li {font-size: 15px;
+                            width: 200px;
+                            height: 240px;
+                            margin-right: 5px;
+                                position: relative;
+                                cursor: pointer;
+                                
+                        }
+.menu .right .m_train ul li i {font-size: 20px;
+                                position: absolute;
+                                right: 0;
+                                color: #fff;
+                                -webkit-text-stroke: 1px #E2203D;
+                                cursor: pointer;}
+.menu .right .m_train ul li i:hover {color: #E2203D;}
+.menu .right .m_train ul li img {width: 200px;
+                                height: 200px;}
+.menu .right .m_train ul li p {text-align: center;
+                                color: #1f1f1f;}
+.menu .menu_bg {width: 600px;
+                height: 650px;
+                background-color: #E2203D;
+                position: absolute;
+                z-index: -1;
+                left: 0;
+
+                transform-origin: left;   
+                transform: scaleX(0);    
+                transition: transform 1.5s ease-in-out;
+                }
+
+/* 메뉴 백그라운드 효과 */
+.menu .menu_bg.on {
+  transform: scaleX(1);    /* 펼쳐짐 */
+}
+
+
+/* 세번째 groupBox ############################################# */
+.groupBox {width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        }
+
+.groupBox .topline {width: 100%;
+                        height: 79px;
+                        background-image: url(img/group/group_topline.png);
+                        background-repeat: repeat-x;
+                        background-position: top;
+                        }
+
+.groupBox .inner {width: 80%;
+                min-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+        }
+
+.groupBox .inner .left, .groupBox .inner .right {display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                flex-direction: column;
+                                                width:100%;
+                                                height: 615px;
+                                                overflow: hidden;
+                                                position: relative;}
+.groupBox .inner .left ul,.groupBox .inner .right ul {width: 200px;
+                                                        height: 615px;
+                                                        position: absolute;}
+.groupBox .inner .left ul li, .groupBox .inner .right ul li{}
+.groupBox .inner .left ul li img, .groupBox .inner .right ul li img {width: 100%;
+                                                                height: auto;
+                                                                margin-bottom: 5px;}
+
+.groupBox .inner .center {width: 80%;
+                        }
+.groupBox .inner .center .txt {text-align: center;
+                                margin-bottom: 60px;}
+.groupBox .inner .center .txt i {font-size: 20px;
+                                color: #E2203D;}
+.groupBox .inner .center .txt h3 {font-size: 20px;
+                                color: #E2203D;
+                                margin-bottom: 20px;
+                                }
+.groupBox .inner .center .txt p {}
+
+.groupBox .inner .center .boxes {}
+.groupBox .inner .center .boxes ul {display: flex;
+                                justify-content: center;
+                                align-items: center;}
+.groupBox .inner .center .boxes ul li {width: 250px;
+                                        height: 380px;
+                                        background-color: #fff;
+                                        border: 1px solid #DE8D8D;
+                                        box-shadow: 4px 4px 4px rgba(0,0,0,0.11);
+                                        margin-top: 50px;
+                                        border-radius: 20px;
+                                        padding: 10px 10px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        margin: 0 5px;
+                                        transition: all 0.5s;}
+.groupBox .inner .center .boxes ul li:nth-child(1) {margin-right: 10px;}
+.groupBox .inner .center .boxes ul li:nth-child(2) {margin-right: 10px;}
+.groupBox .inner .center .boxes ul li img {width: 240px;
+                                        height: 170px;
+                                        padding-bottom: 10px;}
+.groupBox .inner .center .boxes ul li h3 {text-align: center;
+                                        padding-bottom: 10px;
+                                        font-size: 22px;
+                                        color: #1f1f1f;}
+.groupBox .inner .center .boxes ul li p {text-align: center;
+                                        padding-bottom: 30px;
+                                        color: #1f1f1f;}
+.groupBox .inner .center .boxes ul li p a {text-align: center;
+                                        color: #199FDA;}
+.groupBox .inner .center .boxes ul li:hover p a {text-decoration: underline;}
+
+.groupBox .inner .center .boxes ul li.on {background-color: #E2203D;}
+.groupBox .inner .center .boxes ul li.on h3 {color: #fff;}
+.groupBox .inner .center .boxes ul li.on p {color: #fff;}
+.groupBox .inner .center .boxes ul li.on a {color: #FFD447;}
+
+.groupBox .inner .center .boxes ul li:hover {background-color: #E2203D;}
+.groupBox .inner .center .boxes ul li:hover h3 {color: #fff;}
+.groupBox .inner .center .boxes ul li:hover p {color: #fff;}
+.groupBox .inner .center .boxes ul li:hover a {color: #ffd447;}
+
+.groupBox .inner .right {}        
+.groupBox .inner .right ul {}
+.groupBox .inner .right ul li {}
+.groupBox .inner .right ul li img {}
+
+.groupBox .bottomletter {width: 100%;
+                        height: 123px;
+                        background-image: url(img/group/group_bottomLetter.png);
+                        background-repeat: repeat-x;
+                        background-position: bottom;
+                        z-index: -1;
+                        position: absolute;
+                        bottom: 100px;}
+.groupBox .bottomline {width: 100%;
+        height: 45px;
+        background-image: url(img/group/group_bottomline.png);
+        background-repeat: repeat-x;
+        background-position: bottom;
+        }
+.groupBox .inner .left ul:nth-child(1) {top: 0;
+                                        animation: ani1 8s linear infinite;
+                                }
+.groupBox .inner .left ul:nth-child(2) {top: -615px;
+                                        animation: ani2 8s linear infinite;
+                                }
+
+.groupBox .inner .right ul:nth-child(1) {top: 0px;
+                                        animation: ani3 8s linear infinite;}
+.groupBox .inner .right ul:nth-child(2) {top: -615px;
+                                        animation: ani4 8s linear infinite;}
+/* 그룹 left, right 슬라이더 애니메이션 */
+@keyframes ani1 {
+        0% {top: 0;}
+        50%{top: 615px;}
+        50.00001% {top: -615px;}
+        100% {top:0;}
+}
+@keyframes ani2 {
+        0% {top: -615px;}
+        100% {top:615px;}
+}
+@keyframes ani3 {
+  0% { top: 0; }
+  50% {top: -615px;}
+  50.00001% {top: 615px;}
+  100% { top: 0px; }  /* 위로 올라감 */
+}
+@keyframes ani4 {
+  0% { top: 615px; }
+  100% { top: -615px; }       /* 밑에서 위로 올라옴 */
+}
+
+/* 네번째 valueBox ############################################# */
+.valueBox {width: 80%;       
+        margin: 0 auto;
+        min-width: 1200px;
+        /* background-color: #bbb; */
+        padding: 90px 0;
+        box-sizing: border-box;}
+
+.valueBox .txt {display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;}
+.valueBox .txt h3 {font-size: 30px;
+                        margin-bottom: 20px;
+                        color: #E2203D;}
+.valueBox .txt p {text-align: center;}
+.valueBox .txt span {width: 2px;
+                        height: 50px;
+                        background-color: #E2203D;
+                        margin-top: 25px;
+                        margin-bottom: 30px;}
+
+.valueBox .valueImg {margin-top: 50px;}
+
+
+.valueBox .valueImg .first {display: flex;
+                                justify-content: space-evenly;}
+.valueBox .valueImg .first li {width: 25%;
+                                text-align: center;
+                                position: relative;
+                               }
+.valueBox .valueImg .first li img {width: 150px;
+                                        height: 150px;}
+.valueBox .valueImg .first li .chat {position: absolute;
+                                width: 300px;
+                                height: 70px;
+                                left: 50%;
+                                margin-left: -150px;
+                                top: 00px;
+                                opacity: 0;
+                                transition: all 0.5s;
+                                z-index: -1;}                                       
+.valueBox .valueImg .first li .chat img {width: 100%;
+                                        height: 70px;}
+
+.valueBox .valueImg .first li:nth-child(4) .chat {position: absolute;
+                                                width: 350px;
+                                                height: 70px;
+                                                margin-left: -175px;}
+
+
+ .valueBox .valueImg .first li:hover .chat {opacity: 1;
+                                         top: -70px;}
+
+.valueBox .valueImg .second {display: flex;
+                                justify-content: space-evenly;
+                                margin-top: 30px;}
+.valueBox .valueImg .second li {width: 25%;
+                                text-align: center;
+                                position: relative;}
+
+.valueBox .valueImg .second li img {width: 150px;
+                                        height: 150px;}
+.valueBox .valueImg .second li .chat {position: absolute;
+                                        width: 300px;
+                                        height: 70px;
+                                        left: 50%;
+                                        margin-left: -150px;
+                                        bottom: 00px;
+                                        opacity: 0;
+                                        transition: all 0.5s;
+                                        z-index: -1;}
+.valueBox .valueImg .second li .chat img{width: 100%;
+                                height: 70px;}
+
+.valueBox .valueImg .second li:hover .chat {opacity: 1;
+                                         bottom: -75px;}
+
+.valueBox .valueImg .first li .circle p, .valueBox .valueImg .second li p {cursor: pointer;}
+.valueBox .valueImg li:hover p {text-decoration: underline;}
+
+.valueBox .line {border-bottom: 1px solid #bbb;
+                padding-top: 100px;}
+
+/* 다섯번째 timeBox ########################################################## */
+.timeBox {
+        width: 80%;       
+        margin: 0 auto;
+        min-width: 1200px;
+}
+.timeBox .inner {display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;}
+.timeBox .inner .head {text-align: center;
+        margin-bottom: 80px;}
+.timeBox .inner .head h3 {font-size: 30px;
+        margin-bottom: 20px;
+        color: #E2203D;}
+
+
+
+.timeBox .lineBox {display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 1937px;
+        position: relative;
+     background-image: url(img/time/time_line.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;}
+
+
+.timeBox .lineBox>img {width: 100%;
+position: absolute;
+        left: 0;
+top: 0;}
+
+.timeBox .lineBox ul {width: 100%;
+                        height: 100%;
+                        display: flex;
+                flex-direction: column;
+                align-items: center;
+       }
+.timeBox .lineBox ul li {width: 100%;
+                        height: calc(100%/4);}
+
+
+.timeBox .lineBox ul li .yearBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 120px;
+    will-change: transform;
+}
+
+.timeBox .lineBox ul li .yearBox img {width: 100%;
+                                        height: 100%;}
+.timeBox .lineBox ul li:nth-child(1) .yearBox { transform: translate( -655px, -680px ); }
+.timeBox .lineBox ul li:nth-child(2) .yearBox { transform: translate( 560px, -260px ); }
+.timeBox .lineBox ul li:nth-child(3) .yearBox { transform: translate( -655px, 140px ); }
+.timeBox .lineBox ul li:nth-child(4) .yearBox { transform: translate( 560px, 550px ); }
+
+
+.timeBox .lineBox ul li .conBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    will-change: transform;
+transition: all 1.5s;}
+
+.timeBox .lineBox .conBox .txt {
+
+                                width: 43%;
+                                padding: 20px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;}
+.timeBox .lineBox ul li:nth-child(1) .conBox { transform: translate( 2500px, -775px ); }
+.timeBox .lineBox ul li:nth-child(2) .conBox { transform: translate( -3710px, -360px ); }
+.timeBox .lineBox ul li:nth-child(3) .conBox { transform: translate( 2500px, 50px ); }
+.timeBox .lineBox ul li:nth-child(4) .conBox { transform: translate( -3710px, 460px ); }
+
+
+.timeBox .lineBox ul li:nth-child(1) .conBox.on { transform: translate( -500px, -775px ); }
+.timeBox .lineBox ul li:nth-child(2) .conBox.on { transform: translate( -710px, -360px ); }
+.timeBox .lineBox ul li:nth-child(3) .conBox.on { transform: translate( -500px, 50px ); }
+.timeBox .lineBox ul li:nth-child(4) .conBox.on { transform: translate( -710px, 460px ); }
+
+
+.timeBox .lineBox ul li:nth-child(odd) .conBox {}
+.timeBox .lineBox ul li:nth-child(even) .conBox {flex-direction: row-reverse;
+                                                justify-content: right}
+
+
+
+
+.timeBox .lineBox ul li:nth-child(even) .conBox .txt {text-align: end;}
+.timeBox .lineBox ul li .conBox .txt h3 {font-size: 25px;
+                                        margin-bottom: 5px;
+                                        color: #E2203D;}
+.timeBox .lineBox ul li .conBox .txt p {
+        line-height: 150%;
+}
+.timeBox .lineBox ul li .conBox .txt p a {display: block;
+                                        color: #199FDA;
+                                        cursor: pointer;
+                                        }
+.timeBox .lineBox ul li .conBox a:hover {text-decoration: underline;}
+
+
+.timeBox .lineBox ul li .conBox .img {width: 37%;
+                                        display: flex;
+                                        justify-content: center;}
+.timeBox .lineBox ul li .conBox .img img {width: 400px;}
+.timeBox .lineBox ul li:nth-child(2) .conBox .img img {width: 500px;
+                                                        height: auto;}
+.timeBox .lineBox ul li:nth-child(4) .conBox .img img {width: 450px;
+                                                        height: 350px;}
+
+
+.timeBox .lineBox .logo {position: absolute;
+                left: 50%;
+                top: 50%;}
+
+
+/* 여섯번째 eventBox */
+.eventBox {width: 100%;
+                height: 100vh;
+                background-image: url(img/event/event_bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                }
+
+
+.eventBox .line2 {width: 200%;
+                height: 70px;
+                position: relative;
+                left: -50px;
+                top: 150px;
+                overflow: hidden;
+                transform: rotate(5deg);
+                background-color: #480090;
+                z-index: 1;}
+
+.eventBox .line2 p {
+  position: relative;
+  width: max-content;       
+  white-space: nowrap;
+  line-height: 70px;        
+  left: -3000px;              
+}
+.eventBox .line2 p em {
+  display: inline-block;
+  font-family: "Wendy One", sans-serif;
+  font-size: 40px;
+  line-height: 1.5;        
+  vertical-align: middle;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;}
+
+.eventBox .line {width: 200%;
+                height: 70px;
+                position: relative;
+                left: -50px;
+                top: 100px;
+                overflow: hidden;
+                transform: rotate(-5deg);
+                background-color: #E2203D;
+                z-index: 2;}
+
+.eventBox .line p {  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+        }
+.eventBox .line p em {
+        font-size: 40px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+    font-family: "Wendy One", sans-serif;
+display: inline-block;
+text-align: center;
+  line-height: 1.5;          
+  vertical-align: middle; 
+                     }
+
+
+
+
+
+
+.eventBox .eventBox_inner {width: 80%;       
+                margin: 0 auto;
+                min-width: 1200px;
+                height: 100%;}
+
+
+.eventBox .img01 {position: absolute;
+                z-index: 4;
+                bottom: 0;
+                margin-bottom: -50px;
+                left: 50%;
+                margin-left: -500px;
+                width: 655px;
+                height: 655px;}
+.eventBox .img02 {position: absolute;
+                z-index: 4;
+                bottom: 0;
+                left: 50%;
+                margin-left: -850px;
+                width: 555px;
+                height: 555px;}
+.eventBox .img03 {position: absolute;
+                z-index: 5;
+                bottom: 0;
+                width: 655px;
+                height: 655px;}
+
+.eventBox .main {display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 100px;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                position: relative;}
+
+/* .eventBox .eventBox_inner .menu {width: 50%;}
+.eventBox .eventBox_inner .menu img:nth-child(1) {width: 755px;
+        height: 755px;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        margin-top: -470px;}
+.eventBox .eventBox_inner .menu img:nth-child(1) {width: 455px;
+                                                height: 455px;
+                                                position: absolute;
+                                                left: 0;
+                                                bottom: 0;
+                                                z-index: 6;} */
+
+.eventBox .eventBox_inner .content {width: 40%;
+                                        text-align: right;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 50%;
+                                        color: #1f1f1f;
+                                        margin-top: -250px;
+                                        z-index: 30;}
+.eventBox .eventBox_inner .content .logo {}
+.eventBox .eventBox_inner .content .logo img {width: 280px;
+                                        height: 260px;}
+.eventBox .eventBox_inner .content .con {}
+.eventBox .eventBox_inner .content .con h3 {font-size: 50px;
+                                                font-family: "Mystery Quest", system-ui;
+                                                color: #480090;
+                                                margin-bottom: 10px;}
+.eventBox .eventBox_inner .content .con p {margin-bottom: 30px;}
+.eventBox .eventBox_inner .content .btn {
+                                        width: 200px;
+                                        height: 50px;
+                                        background-color: #fff;
+                                        border-radius: 50px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        margin-left: auto;
+                                        cursor: pointer;
+                                        transition: all 0.6s;
+                                        box-shadow: 3px 3px 5px #525252;}
+.eventBox .eventBox_inner .content .btn a {display: block;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        cursor: pointer;}
+.eventBox .eventBox_inner .content .btn:hover {background-color: #480090;}
+.eventBox .eventBox_inner .content .btn:hover a {color: #fff;}
+
+.eventBox .and {position: absolute;
+                right: 0;
+                bottom: 50%;
+                margin-bottom: -300px;
+                opacity: 0.5;
+                z-index: 0;}
+
+/* 일곱번째 reviewBox 페이지########################################################################## */
+
+.reviewBox {width: 100%;
+                height: 100vh;
+        /* background-color: #bbb; */
+}
+.reviewBox .review_inner {width: 80%; 
+                        height: 100%;      
+                        margin: 0 auto;
+                        min-width: 1200px;
+                        display: flex;
+                        justify-content: center;
+                        
+                        /* background-color: #DE8D8D; */
+                }
+.review_inner .left {width: 500px;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        }
+.review_inner .left .pic {overflow: hidden;
+                        width: 400px;
+                        height: 520px;}
+.review_inner .left .pic ul {display: flex;
+                                width: 400px;
+                                height: 500px;
+                        position: relative;}
+.review_inner .left .pic ul li {width: 100%;
+                                height: 520px;
+                                position: absolute;
+                                right: -100%;
+                                }
+.review_inner .left .pic ul li:nth-child(1) {right: 0;}
+.review_inner .left .pic ul li img {width: 100%;
+                                height: 100%;
+                                }
+
+
+
+/* 리뷰 slide점 */
+.review_inner .left .slide {width: 400px;
+                                margin-top: 20px;}
+.review_inner .left .slide ul {display: flex;
+                                justify-content: center;}
+.review_inner .left .slide ul li {width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                background-color: #DE8D8D;
+                                text-indent: -9999px;
+                                margin-right: 10px;
+                                cursor: pointer;
+                                }
+.review_inner .left .slide ul li:hover {transform: scale(1.1);
+                                        background-color: #E2203D;
+                                        transition: all 0.5s;}
+                                        
+
+
+.review_inner .right {width: 60%;
+                height: 100%;
+                /* background-color: #DE8D8D; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                }
+
+.review_inner .right h2 {font-size: 30px;
+                        color: #E2203D;
+                        margin-bottom: 3px;}
+.review_inner .right h2 span {font-size: 25px;
+                                padding-left: 5px;}
+.review_inner .right p {margin-bottom: 10px;}
+.review_inner .right .btn {width: 150px;
+                        height: 45px;
+                        background-color: #E2203D;
+                        border-radius: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 10px;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        box-shadow: 3px 3px 5px #525252;}
+.review_inner .right .btn a {display: block;
+                                color: #fff;}
+.review_inner .right .btn:hover {background-color: #199FDA;
+                                }
+
+.review_inner .right .search {margin-top: 10px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;}
+.review_inner .right .search input {width: 300px;
+                                padding: 8px;
+                                border: 1px solid #ccc;
+                                border-radius: 20px;}
+.review_inner .right .search p {
+        margin-right: 45px;}
+.review_inner .right .search p a {display: block;
+                                color: #199FDA;
+                                cursor: pointer;}
+.review_inner .right .search p a:hover {text-decoration: underline;}
+.review_inner .right .top_line {margin: 10px 0;
+                        width: 95%;}
+
+.review_inner .right ul {width: 90%;
+                        height: 340px;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        padding: 0 20px;}
+.review_inner .right ul::-webkit-scrollbar {
+    width: 7px;}
+.review_inner .right ul::-webkit-scrollbar-thumb {background-color: #E2203D;
+                                                border-radius: 50px;}
+.review_inner .right ul::-webkit-scrollbar-track {background-color: #ddd;
+                                                border-radius: 50px;}                                                
+.review_inner .right ul li {height: 150px;
+                        padding: 3px 0;}
+.review_inner .right ul li .p1 {display: flex;}
+.review_inner .right ul li .p1 .person {width: 20%;}
+.review_inner .right ul li .p1 .person p {}
+.review_inner .right ul li .p1 .person p:nth-child(1) {font-weight: bold;}
+.review_inner .right ul li .p1 .person p:nth-child(2) {color: #F4B618;
+                                                        font-size: 20px;}
+.review_inner .right ul li .p1 .person p:nth-child(3) {color: #525252;}
+.review_inner .right ul li .p1 .person p:nth-child(4) {}
+
+/* .review_inner .right ul li span {width: 2px;
+                                height: 50px;
+                                background-color: #525252;
+                                margin-top: 25px;
+                                margin-bottom: 30px;} */
+.review_inner .right ul li .p1 .txt {width: 80%;}
+.review_inner .right ul li .p1 .txt>p {padding: 3px 0;}
+.review_inner .right ul li .p1 .txt .details {font-weight: bold;}
+.review_inner .right ul li .p1 .txt .more {text-align: end;}
+.review_inner .right ul li .p1 .txt .more a {display: block;
+                                                color: #199FDA;
+                                                cursor: pointer;}
+.review_inner .right ul li .p1 .txt .more a:hover {text-decoration: underline;}
+.review_inner .right ul>div {border-bottom: 1px solid #ddd;
+                                margin: 5px 0;}
+
+
+
+/* 푸터 설정 ##########################################################################*/
+/* 카피라이트 설정 */
+.copyright {width: 100%;
+                height: 200px;
+                background-color: #E2203D;
+                display: flex;
+                justify-content: center;
+                align-items: center;}
+.copyright .inner {width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;} 
+.copyright .inner p {color: #fff;} 
+
+
+/* wrap - 메인페이지 구성 */
+#wrap {position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;}
+/* 서브페이지01 구성 */
+#sub01 {position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: none;}
+/* 로그인박스 구성 ##################################################*/
+.loginBox {position: absolute;
+        width: 100%;
+         height: calc(100% - 90px);
+        top: 90px;
+        left: 0;
+        display: none;
+        }
+.loginBox .inner {width: 80%; 
+                height: 100%;      
+                margin: 0 auto;
+                min-width: 1200px;
+                /* background-color: #bbb; */
+        }
+.loginBox .inner .main_btn {}
+.loginBox .inner .main_btn p {}
+.loginBox .inner .main_btn p a {display: block;
+                                font-size: 15px;
+                                font-weight: bold;
+                                color: #1f1f1f;}
+
+.loginBox .inner .main_btn span {display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #ccc;
+                                margin: 10px 0;}
+
+.loginBox .inner .main_btn ul {display: flex;
+                                align-items: center;}
+.loginBox .inner .main_btn ul li {color: #525252;
+                                margin-right: 10px;}
+
+.loginBox .inner .main_input {display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                overflow-y: hidden;}
+.loginBox .main_input .head {width: 33%;
+                                margin: 20px;}
+.loginBox .main_input .head .title {font-size: 60px;
+                                        font-family: "Noto Sans", sans-serif;
+                                         /* font-family: "Orbitron", sans-serif; */
+                                        font-weight: bold;
+                                        color: #1f1f1f;
+                                        line-height: 1.1;}
+.loginBox .inner .main_input .head .title em {font-style: normal;
+                                        color: #E2203D;}
+.loginBox .inner .main_input .head .content {font-family: "Noto Sans", sans-serif;
+                                        margin-top: 10px;}
+
+.loginBox .inner .main_input .inputGroup {width: 33%;}
+.loginBox .inner .main_input .inputGroup ul {}
+.loginBox .inner .main_input .inputGroup ul li {margin-bottom: 10px;}
+.loginBox .inner .main_input .inputGroup ul li input {width: 100%;
+                                                height: 80px;
+                                                font-size: 20px;
+                                                padding: 15px;
+                                                color: #1f1f1f;
+                                                box-sizing: border-box;
+                                                border: 1px solid #1f1f1f;
+                                                border-radius: 5px;}
+.loginBox .inner .main_input .inputGroup ul li button {width: 100%;
+                                                        height: 80px;
+                                                        font-size: 20px;
+                                                        padding: 15;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        background-color: #E2203D;
+                                                        color: #fff;
+                                                        border: 1px solid #E2203D;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        transition: all 0.2s;
+                                                        box-shadow: 3px 3px 8px #525252;}
+.loginBox .inner .main_input .inputGroup ul li:nth-child(3):hover button {background-color: #199FDA;
+                                                                        border: 1px solid #199FDA;}
+
+.loginBox .inner .main_input .bottom {width: 33%;
+                                        height: 130px;
+                                        padding: 20px;
+                                        border: 1px solid #1f1f1f;
+                                        box-sizing: border-box;
+                                        border-radius: 5px;
+                                        margin-top: 50px;}
+.loginBox .inner .main_input .bottom .find {width: 100%;
+                                                height: 45%;
+                                                }
+.loginBox .inner .main_input .bottom .find ul {display: flex;
+                                                justify-content: space-evenly;
+                                                align-items: center;}
+.loginBox .inner .main_input .bottom .find ul li {}
+.loginBox .inner .main_input .bottom .find ul li a {}
+
+.loginBox .inner .main_input .bottom .line {display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #ccc;
+                                margin-bottom: 15px;}
+
+.loginBox .inner .main_input .bottom .login {width: 100%;
+                                                height: 55%;
+                                                padding-top: 3px;}
+.loginBox .inner .main_input .bottom .login ul {display: flex;
+                                                justify-content: space-evenly;
+                                                align-items: center;}
+.loginBox .inner .main_input .bottom .login ul li:nth-child(2) {}
+/* 장바구니설정 ########################################################################## */
+.shopping {width: 300px;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        right: -300px;
+        top: 0;
+        background-color: #E2203D;
+        /* color: #fff; */
+        transition: all 0.8s;
+        border-radius: 10px;}
+
+.shopping.on {right: 0;}
+
+.shopping .icon {width: 60px;
+                height: 60px;
+                background-color: #E2203D;
+                color: #fff;
+                position: absolute;
+                left: -60px;
+                top: 100px;
+                font-size: 28px;
+                text-align: center;
+                line-height: 2;
+                cursor: pointer;
+                box-shadow: 3px 3px 3px #303030;}
+
+.shopping .icon:hover {transform: scale(1.1);
+                        transition: transform 0.5s ease;}
+
+.shopping .icon span {position: absolute;
+                        font-size: 12px;
+                        background-color: #fff;
+                        color: #303030;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        right: 0;
+                        top: 5px;
+                        line-height: 1.5;}
+
+.shopping .cart_page {display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        width: 100%;}
+.shopping .cart_page>p {font-size: 25px;
+                        color: #fff;
+                        padding: 10px 0;
+                        font-weight: bold;}
+.shopping .cart_page .cartSet {width: 100%;}
+.shopping .cart_page .cartSet ul {}
+.shopping .cart_page .cartSet ul li {}
+.shopping .cart_page .cartSet ul li span{}
+
+.shopping .cart_page .cartSet hr {width: 100%;}
+
+
+
+
+
+
+

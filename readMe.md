@@ -72,8 +72,6 @@
 - [무드보드](https://www.figma.com/proto/XnjMPmvlNdhkXPTGt1mAdf/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=1-5&t=lX1dCrciG2YAF0r5-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
 - [와이어 프레임 & 디자인시안](https://www.figma.com/proto/XnjMPmvlNdhkXPTGt1mAdf/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=341-196&p=f&t=QEYpaNRuZwcsPUHX-1&scaling=min-zoom&content-scaling=fixed&page-id=341%3A195)
 - [최종 사이트](https://jooyeonglim.github.io/portfolio2025/project002/)
-- [코드 저장소](링크)
-- [배포 사이트](링크)
 
 ### 👀 페이지 미리보기
 | 메인 페이지 |

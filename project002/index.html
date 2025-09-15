@@ -10,7 +10,7 @@
 
     <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <link rel="stylesheet" href="0905.css">
+    <link rel="stylesheet" href="0906.css">
 
     <!-- 제이쿼리 CDN -->
     <script src="http://code.jquery.com/jquqery-latest.js"></script>
@@ -19,18 +19,21 @@
 
 
     <!-- 외부스크립트 연결 -->
-    <script src="0905.js"></script>
+    <script src="0906.js"></script>
 
     <!-- 폰트어썸 CDN -->
     <script src="https://kit.fontawesome.com/5b60675eee.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section class="shopping">
-        <p class="icon"><i class="fa-solid fa-basket-shopping"></i><span>0</span></p>
+     <div class="shopping" id="shopping">
+        <p class="icon">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span id="cart-count">0</span>
+        </p>
         <div class="cart_page">
             <p>장바구니</p>
-            <div class="cartSet">
+            <div>
                 <ul>
                     <li>
                         <span>상품정보</span>
@@ -38,16 +41,39 @@
                         <span>금액</span>
                         <span>갯수</span>
                     </li>
+
+                    <!-- <li>
+                      <div>
+                        <img src="" alt="">
+                        <p>제품이름</p>
+                      </div>
+                      <div>옵션정보</div>
+                      <div>2,000원</div>
+                      <div>1</div>
+                      </li> -->
                 </ul>
+                
+                <!-- 장바구니 아이템들 -->
+                <div class="cart_items" id="cart-items">
+                    <!-- 빈 장바구니 상태 -->
+                    <div class="empty_cart">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <p>장바구니가 비어있습니다</p>
+                        <small>상품을 담아보세요!</small>
+                    </div>
+                </div>
+                
                 <hr>
-                <div>
-                    <p>총 상품금액 : <em>00</em> 원 </p>
-                    <p>총 배송비 : <em>00</em> 원 </p>
-                    <p>총 주문금액 : <em>00</em> 원 </p>
+                
+                <div class="cart_total">
+                    <p>총 상품금액 : <em id="product-total">0</em> 원</p>
+                    <p>총 배송비 : <em id="delivery-fee">0</em>원</p>
+                    <p>총 주문금액 : <em id="order-total">0</em>원</p>
+                    <button class="order_btn">주문하기</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <header class="hero">
         <div class="head">
@@ -245,11 +271,13 @@
                         <li><img src="img/group/group_side001.png" alt=""></li>
                         <li><img src="img/group/group_side002.png" alt=""></li>
                         <li><img src="img/group/group_side003.png" alt=""></li>
+                        <li><img src="img/group/group_side004.png" alt=""></li>
                     </ul>
                     <ul>
-                        <li><img src="img/group/group_side004.png" alt=""></li>
                         <li><img src="img/group/group_side005.png" alt=""></li>
                         <li><img src="img/group/group_side006.png" alt=""></li>
+                        <li><img src="img/group/group_side007.png" alt=""></li>
+                        <li><img src="img/group/group_side008.png" alt=""></li>
                     </ul>
                 </div>
                 <div class="center">
@@ -285,14 +313,16 @@
                 </div>
                 <div class="right">
                     <ul>
-                        <li><img src="img/group/group_side004.png" alt=""></li>
-                        <li><img src="img/group/group_side005.png" alt=""></li>
-                        <li><img src="img/group/group_side006.png" alt=""></li>
+                        <li><img src="img/group/group_side009.png" alt=""></li>
+                        <li><img src="img/group/group_side010.png" alt=""></li>
+                        <li><img src="img/group/group_side011.png" alt=""></li>
+                        <li><img src="img/group/group_side012.png" alt=""></li>
                     </ul>
                     <ul>
-                        <li><img src="img/group/group_side001.png" alt=""></li>
-                        <li><img src="img/group/group_side002.png" alt=""></li>
-                        <li><img src="img/group/group_side003.png" alt=""></li>
+                        <li><img src="img/group/group_side013.png" alt=""></li>
+                        <li><img src="img/group/group_side014.png" alt=""></li>
+                        <li><img src="img/group/group_side015.png" alt=""></li>
+                        <li><img src="img/group/group_side016.png" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -693,6 +723,9 @@
 
 
             </div>
+        </div>
+        <div class="bg">
+            <img src="img/login/login_all.png" alt="">
         </div>
     </section>
 

@@ -59,13 +59,22 @@
 **🧑 역할** : 디자인 100%, 퍼블리싱 100%, 기획 100%
 
 ### ⭐ 프로젝트 설명
-모바일 환경 최적화를 목표로 제작한 쇼핑몰 사이트입니다.  
+본 프로젝트는 사용자 친화적인 디자인과 직관적인 UI/UX로 리뉴얼하는 것을 목표로 진행했습니다. 방문자가 사이트에 들어왔을 때 원하는 메뉴에 집중할 수 있도록 설계했습니다.
 
-- 메인컬러 : Hex code #e2203d (빨간색) / 포인트컬러 : Hex code #199fda (하늘색)
+주요 특징 및 기여:
+
+- 사용자 중심의 메뉴 배치:두 번째 섹션에 메뉴를 배치하여 사용자가 사이트 방문 직후 가장 관심 있는 정보를 바로 확인할 수 있도록 구성했습니다.
+- 장바구니 기능 구현: 메뉴 선택 후 바로 담을 수 있는 장바구니를 구현하여 구매 과정을 간소화하고, 편리한 쇼핑 경험을 제공합니다.
+- 친근한 UI 디자인: 전체적인 색감과 레이아웃, 타이포그래피를 통해 방문자가 편안함과 신뢰감을 느낄 수 있도록 디자인했습니다.
+
+
+- 메인컬러 : Hex code #e2203d (빨간색) / 친근함 & 식욕자극
+- 포인트컬러 : Hex code #199fda (하늘색) / 신뢰감 & 청결
 - **Swiper** 슬라이드, **Parallax Scrolling** 패럴랙스 스크롤링, **장바구니**, **로그인 페이지** 구현
 
 ### 🚀 링크
-- [디자인 시안](링크)
+- [무드보드](https://www.figma.com/proto/XnjMPmvlNdhkXPTGt1mAdf/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=1-5&t=lX1dCrciG2YAF0r5-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
+- [와이어 프레임 & 디자인시안](https://www.figma.com/proto/XnjMPmvlNdhkXPTGt1mAdf/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=341-196&p=f&t=QEYpaNRuZwcsPUHX-1&scaling=min-zoom&content-scaling=fixed&page-id=341%3A195)
 - [코드 저장소](링크)
 - [배포 사이트](링크)
 

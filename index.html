@@ -1,38 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>임주영 포트폴리오</title>
+    <title>Code Quest : JY</title>
+    <link rel="stylesheet" href="css/0917 copy 2.css">
+    <!-- 외부스크립트연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="javascript/0917 copy 2.js"></script>
 </head>
+
 <body>
-    <h1>본인 이름의 아이콘 또는 로고</h1>
-    <nav>
-        <ul>
-            <li>about-본인의 프로필</li>
-            <li>project1</li>
-            <li>project2</li>
-            <li>project3</li>
-        </ul>
-    </nav>
+    
+    <header class="hero">
+        <div class="head">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Project</a></li>
+            </ul>
+        </div>
+    </header>
 
     <div id="wrap">
-        <section>프로필</section>
-        <section>작품1의 내용
-            <div class="btn">
-                <ul>
-                    <li>컨셉뷰 연결</li>
-                    <li><a href="" target="_blank">링크 바로가기</a></li>
-                </ul>
+        <!-- 메인 컨테이너 -->
+        <div class="container">
+            <img src="img/landing_star001.png" alt="big_star" class="star1">
+            <img src="img/landing_star002.png" alt="small_star" class="star2">
+            <div class="inner">
+                <!-- 타이틀 -->
+                <h1 class="title">
+                        <div class="title_mark">!</div>
+                        <div class="title_txt">
+                            <span class="c">C</span><span class="rest">ode quest</span>
+                            <span class="jy">: JY</span>
+                        </div>
+                </h1>
+    
+                <!-- 로딩바 -->
+                <div class="loading-text">
+                    <span class="typing">. . . <span>PORTFOLIO</span> LODING NOW . . .</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+    
+                <!-- 버튼 -->
+                <div class="buttons">
+                    <button disabled>Press Start to Begin</button>
+                    <button disabled>Let's go!</button>
+                </div>
             </div>
-
-            <!-- 길게 나온 이미지 -->
-            <div class="concepView">
-                <img src="" alt="">
+            
+            <div class="ghost_container001">
+                <img src="img/ghost001.png" alt="유령1" class="ghost001">
+                <div class="speech001">대전 아쿠아리움으로 가자!</div>
             </div>
-        </section>
-        <section>작품2의 내용</section>
-        <section>작품3의 내용</section>
+            <div class="ghost_container002">
+                <img src="img/ghost002.png" alt="유령2" class="ghost002">
+                <div class="speech002">맛있는 Wendy's에 어서오세요!</div>
+            </div>
+            <div class="bg"></div>
+        </div>
     </div>
+
+    <section class="indexBox">
+        <div class="inner">
+
+        </div>
+    </section>
 </body>
+
 </html>

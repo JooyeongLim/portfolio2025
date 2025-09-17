@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quest : JY</title>
-    <link rel="stylesheet" href="css/0917 copy 2.css">
+    <link rel="stylesheet" href="css/0917 copy 3.css">
     <!-- 외부스크립트연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="javascript/0917 copy 2.js"></script>
+    <script src="javascript/0917 copy 3.js"></script>
 </head>
 
 <body>
-    
-    <header class="hero">
+
+    <!-- <header class="hero">
         <div class="head">
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="">About me</a></li>
                 <li><a href="">Project</a></li>
             </ul>
         </div>
-    </header>
+    </header> -->
 
     <div id="wrap">
         <!-- 메인 컨테이너 -->
@@ -30,13 +30,13 @@
             <div class="inner">
                 <!-- 타이틀 -->
                 <h1 class="title">
-                        <div class="title_mark">!</div>
-                        <div class="title_txt">
-                            <span class="c">C</span><span class="rest">ode quest</span>
-                            <span class="jy">: JY</span>
-                        </div>
+                    <div class="title_mark">!</div>
+                    <div class="title_txt">
+                        <span class="c">C</span><span class="rest">ode quest</span>
+                        <span class="jy">: JY</span>
+                    </div>
                 </h1>
-    
+
                 <!-- 로딩바 -->
                 <div class="loading-text">
                     <span class="typing">. . . <span>PORTFOLIO</span> LODING NOW . . .</span>
@@ -44,14 +44,14 @@
                 <div class="progress">
                     <div class="progress-bar"></div>
                 </div>
-    
+
                 <!-- 버튼 -->
                 <div class="buttons">
-                    <button disabled>Press Start to Begin</button>
-                    <button disabled>Let's go!</button>
+                    <button disabled>About me</button>
+                    <button disabled>Project!</button>
                 </div>
             </div>
-            
+
             <div class="ghost_container001">
                 <img src="img/ghost001.png" alt="유령1" class="ghost001">
                 <div class="speech001">대전 아쿠아리움으로 가자!</div>
@@ -64,11 +64,37 @@
         </div>
     </div>
 
+    <!-- About Me 섹션 -->
     <section class="indexBox">
         <div class="inner">
-
+            <button class="backBtn">Home</button>
         </div>
     </section>
+
+    <!-- Project 섹션 -->
+    <section class="projectBox">
+        <div class="inner">
+            <ul>
+                <li>
+                    <button class="concep1">컨셉뷰 바로보기</button>
+                    <button class="siteLink1">사이트 바로가기</button>
+                </li>
+                <li>
+                    <button class="concep2">컨셉뷰 바로보기</button>
+                    <button class="siteLink2">사이트 바로가기</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 팝업창 -->
+    <div class="img-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="img/project1_preview.png" alt="팝업 이미지" id="popupImg">
+        </div>
+    </div>
+
 </body>
 
 </html>

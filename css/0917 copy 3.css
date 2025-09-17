@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
+  cursor: url('../img/mouse.png'),auto;
 }
 
 ul {list-style: none;}
@@ -15,18 +16,50 @@ a {text-decoration: none;
   color: #222;
   font-family: "Titan One", sans-serif;}
 
+img {border: none;
+    vertical-align: bottom;}
+
 body {
-  cursor: url('img/mouse.png'),auto;
+  
 }
 
 /* hero 섹션설정 */
 .hero {width: 100%;
-      position: relative;}
-.head {width: 100%;
-      height: 80px;
-      position: absolute;}
+  height: 80px;
+      position: relative;
+      z-index: 30;}
+.hero>.head {position: absolute;
+      top: 20%;
+      right: 20px;}
 .head ul {display: flex;}
+.head ul li {margin-right: 10px;
+            margin-top: 10px;
+            cursor: pointer;}
+.head ul li:nth-child(1) a {font-size: 30px;
+              border: 1px solid #145a32;
+              border-radius: 10px;
+              padding: 10px 30px;
+              text-align: center;
+              cursor: pointer;}
+.head ul li:nth-child(2) a {font-size: 30px;
+                            border: 1px solid #f1c40f;
+                            border-radius: 10px;
+                            padding: 10px 30px;
+                            text-align: center;
+                            cursor: pointer;}
+.head ul li:nth-child(1) a {color: #145a32;
+                            box-shadow: 3px 3px 0px #145a32;
+                            transition: all 0.3s ease;}
+.head ul li:nth-child(2) a {color: #f1c40f;
+                            box-shadow: 3px 3px 0px #f1c40f;}
 
+.head ul li:nth-child(1):hover {
+  transform: translateY(-3px);
+}
+
+.head ul li:nth-child(2):hover {
+  transform: translateY(-3px);
+}
 
 /* 타이틀 */
 .container {width: 100%;
@@ -211,7 +244,7 @@ body {
 
 /* 버튼 기본 스타일 */
 button {
-  padding: 10px 30px;
+  padding: 7px 25px;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
@@ -349,48 +382,130 @@ button:enabled:not(.blink) {
   z-index: 1;
 }
 
-/* wrap 메인페이지 구성 */
-#wrap {position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;}
+/* gpt 알려준거 */
+.indexBox{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/aboutme1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    color: white;
+}
 
-/* 인덱스 구성 */
-.indexBox {position: absolute;
-          width: 100%;
-          height: 100vh;}
+.indexBox .inner {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* 돌아가기 버튼 스타일 */
+.indexBox .backBtn {
+    margin-top: 87px;
+    margin-right: 60px;
+    padding: 8px 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #FAC59E;
+    color: #242424;
+    border: 1px solid #242424;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 #242424;
+    transition: all 0.3s ease;
+}
+
+.baackBtn:hover {transform: none;
+                box-shadow: 2px 2px 0 #242424;}
+
+.projectBox {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/project_index1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    color: white;
+}                
+
+.projectBox .inner {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.projectBox ul {position: relative;}
+.projectBox ul li {
+                  position: absolute;
+                  display: flex;
+                  flex-direction: column;}
+
+.projectBox ul li button {margin-bottom: 15px;}
+
+.projectBox ul li:nth-child(1) {top: 50%;
+                                left: 50%;
+                                margin-top: 610px;
+                                margin-left: -410px;}
+
+.projectBox ul li:nth-child(2) {top: 50%;
+                                left: 50%;
+                                margin-top: 610px;
+                                margin-left: -95px;}
 
 
-/* .body {position: relative;}
-.graph_top {display: flex;
-            gap: 20px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;}
-.graph_top>.bar {width: 60px;
-                min-height: 10px;
-                border-radius: 0 0 50px 50px;
-                min-height: 5px;}
-.graph_top .bar1{background-color: #27ae60;}
-.graph_top .bar2 {background-color: #f1c40f;}
-.graph_top .bar3 {background-color: #FDE75F;}
+/* gpt 팝업창 css */
+/* 팝업 숨김 및 중앙정렬 */
+.img-popup {
+    display: none; /* 반드시 none */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+    padding: 20px;
+}
 
-.graph_bottom {display: flex;
-            gap: 20px;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;}
-.graph_bottom>.bar {width: 60px;
-                min-height: 10px;
-                border-radius: 50px 50px 0 0;
-                min-height: 5px;}
 
-.graph_top .bar4{background-color: #27ae60;}
-.graph_top .bar5 {background-color: #f1c40f;}
-.graph_top .bar6 {background-color: #FDE75F;}                 */
+/* 팝업 내용 */
+.img-popup .popup-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh; /* 화면 90% 높이 */
+}
 
+/* 이미지 */
+.img-popup .popup-content img {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 70%; /* 화면 90% */
+    display: block;
+    margin: 0 auto; /* 수평 중앙 */
+    border-radius: 10px;
+}
+
+/* 닫기 버튼 */
+.img-popup .close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    padding: 0px 10px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.5);
+}

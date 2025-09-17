@@ -70,4 +70,61 @@ $(document).ready(function () {
   // 반복
   setInterval(() => { moveGhost001(); showSpeech001("대전 아쿠아리움으로 가자!🐟"); }, 7000);
   setInterval(() => { moveGhost002(); showSpeech002("🍔맛있는 wendy's에 어서오세요!"); }, 7000);
+
+
 });
+
+$(document).ready(function() {
+    var $buttons = $(".buttons button");
+
+    // 첫 번째 버튼 클릭 (About Me)
+    $buttons.eq(0).click(function() {
+        $("#wrap").fadeOut(500);
+        $(".indexBox").fadeIn(500);
+    });
+
+    // 두 번째 버튼 클릭 (Project)
+    $buttons.eq(1).click(function() {
+        $("#wrap").fadeOut(500);
+        $(".projectBox").fadeIn(500);
+    });
+
+    // 돌아가기 버튼 클릭
+    $(".backBtn").click(function() {
+        $(".indexBox, .projectBox").fadeOut(500);
+        $("#wrap").fadeIn(500);
+    });
+});
+
+$(document).ready(function() {
+    $(".img-popup").hide(); // 페이지 로드 시 숨김
+});
+
+$(document).ready(function() {
+    // concep1 버튼 클릭
+    $(".concep1").click(function() {
+        const imgSrc = "img/project1_preview.png";
+        $("#popupImg").attr("src", imgSrc);
+        $(".img-popup").fadeIn(300); // 버튼 클릭 시만 팝업
+    });
+
+    // concep2 버튼 클릭
+    $(".concep2").click(function() {
+        const imgSrc = "img/concep2.png";
+        $("#popupImg").attr("src", imgSrc);
+        $(".img-popup").fadeIn(300);
+    });
+
+    // 닫기 버튼
+    $(".img-popup .close").click(function() {
+        $(".img-popup").fadeOut(300);
+    });
+
+    // 배경 클릭 시 닫기
+    $(".img-popup").click(function(e) {
+        if ($(e.target).is(".img-popup")) {
+            $(this).fadeOut(300);
+        }
+    });
+});
+

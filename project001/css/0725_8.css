@@ -415,7 +415,7 @@ img {border: 0;
 .box3 .more a:hover {background-color: #FFDA00;
                         color: #143DC5;}
 
-.box3-2 .imgBox ul li:nth-child(1) {background-image: url(../img/fish001.jpg);
+/* .box3-2 .imgBox ul li:nth-child(1) {background-image: url(../img/fish001.jpg);
                                 background-size: cover;
                                 background-position: center;}
 
@@ -437,7 +437,7 @@ img {border: 0;
 
 .box3-2 .imgBox ul li:nth-child(6) {background-image: url(../img/fish006.jpg);
                                 background-size: cover;
-                                background-position: center;}
+                                background-position: center;} */
 
 
 /* 동물 친구들 사진 움직임 */
@@ -511,7 +511,7 @@ img {border: 0;
                 border-radius: 20px;}
 .box4 .more a:hover {background-color: #FFDA00;
                         color: #143DC5;}
-
+/* 
 .box4-2 .imgBox ul li:nth-child(1)  {background-image: url(../img/program001.jpg);
                                 background-size: cover;
                                 background-position: center;}
@@ -530,7 +530,7 @@ img {border: 0;
 
 .box4-2 .imgBox ul li:nth-child(6)  {background-image: url(../img/program006.jpg);
                                 background-size: cover;
-                                background-position: center top;}
+                                background-position: center top;} */
 /* 프로그램 사진 움직임 */
 .box4-2 .imgBox ul:nth-child(1) {
         right: 0;

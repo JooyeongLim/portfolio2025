@@ -1,0 +1,941 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Roboto", sans-serif; */
+
+@font-face {
+    font-family: 'Formula1_Wide';
+    src: url('../font/Formula1-Wide_web_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Formula1_Bold';
+    src: url('../font/Formula1-Bold_web_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Formula1_Regular';
+    src: url('../font/Formula1-Regular_web_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* font-family: 'Formula1_Wide', sans-serif; */
+/* font-family: 'Formula1_Bold', sans-serif; */
+/* font-family: 'Formula1_Regular', sans-serif; */
+
+* {margin: 0;
+    padding: 0;}
+ol, ul {list-style: none;}
+a {text-decoration: none;
+    color: #3c3c3c;}
+img {border: 0;}
+body {background-color: #222;
+      overflow-x: hidden;}
+
+
+/* 랜딩 전 로딩 스크린 애니메이션 */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .loading-logo {
+            font-family: 'Formula1_Wide', Arial, sans-serif;
+            font-size: 60px;
+            color: #FF8000;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        .loading-bar {
+            width: 300px;
+            height: 4px;
+            background: rgba(255, 128, 0, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #FF8000, #FFD700);
+            width: 0%;
+            animation: loading 3s ease-out forwards;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+/* 맨 위 로고 고정값 */
+.topLogo {width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 99;
+            position: fixed;
+            }
+.topLogo .logoLeft {width: 220px;
+                            height: 67px;
+                            margin: 10px;
+                            margin-left: 20px;
+                          cursor: pointer;}
+.topLogo .logoRight {width: 70px;
+                            height: 70px;
+                            margin: 10px;
+                            margin-right: 20px;
+                          cursor: pointer;
+                            }
+
+.landTeam {font-family: 'Formula1_Regular', sans-serif;
+            position: fixed;
+            top: 50%;
+            right: 0;
+            color: #fff;
+            font-size: 15px;
+            margin-right: -80px;
+            transform: rotate(90deg);}    
+
+/* wrap 랜딩페이지 배경 설정 */
+.landingVideo {width: 100%;
+              height: 100vh;
+                position: relative;}
+
+
+.landingVideo>video {width: 100%;
+                    height: 100%;
+                    object-fit: cover;}
+
+.landingVideo .landTxt001 {position: absolute;
+                        color: #FF8000;
+                        font-size: 70px;
+                        left: 50%;
+                        top: 50%;
+                        margin-left: 350px;
+                        margin-top: -330px;
+                        font-family: 'Formula1_bold', sans-serif;}
+.landingVideo .landTxt001 em {font-size: 30px;
+                            font-family: 'Formula1_Regular', sans-serif;
+                            color: #fff;}
+
+.landingVideo .landTxt002 {position: absolute;
+                        color: #fff;
+                        font-size: 15px;
+                        left: 50%;
+                        top: 50%;
+                        margin-left: 355px;
+                        margin-top: -250px;
+                        font-family: 'Formula1_regular', sans-serif;}
+
+
+.header {background: linear-gradient(-45deg,#FF8000,  #FF8000, #FF8C18);
+        position: fixed;
+        width: 700px;
+        height: 100%;
+        transform: skew(-30deg);
+        top: 0;
+        left: 50%;
+        margin-left: -1600px;
+        z-index: 90;
+        opacity: 1;
+        transition: all 0.5s;} 
+
+.header.on {opacity: 0;}
+
+/* 1depth 설정 */
+.gnb {width: 220px;
+        position: absolute;
+        top: 100px;
+        right: 0;}
+.gnb>li>a {display: block;
+            width: 220px;
+            height: 50px;
+            font-size: 16px;
+            font-family: 'Formula1_Wide', sans-serif;
+            color: #222;
+            text-align: right;
+            box-sizing: border-box;
+            padding-right: 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            line-height: 3;}
+.gnb>li {position: relative;}
+
+/* 호버시 gnb 색상 변경 */
+.gnb>li.on>a {background-color: #111;
+                color: #fff;}
+.gnb>li:hover a {background-color: #111;
+                color: #fff;}
+
+.gnb em {display: inline-block;
+        transform: skewX(40deg);}
+
+
+/* 2depth 설정 */
+.gnb ul {position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.4s;
+        opacity: 0;}
+.gnb>li:hover ul {left: 205px;
+                opacity: 0.8;}
+.gnb ul a {display: block;
+            border-bottom: 1px solid #fff;
+            font-size: 17px;
+            font-family: 'Formula1_Regular', sans-serif;
+            line-height: 2.5;
+            width: 150px;
+            height: 40px;
+            background-color: #FF8000;
+            /* background-color: #111; */
+            padding-left: 50px;
+            margin-bottom: 3px;
+            box-sizing: border-box;
+            transition: all 0.6s;
+            }
+.gnb ul a:hover {background: #FF8000;
+                color: #fff;}
+.gnb>li.on ul {opacity: 0.8;
+                left: 205px;
+                top: -10px;}
+
+/* landNum */
+.landNum {position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        }
+.landNum p {font-family: 'Formula1_Wide', sans-serif;
+            color: #222;
+            font-size: 20px;
+            transform: skewX(40deg);}
+
+.driverNum {position: absolute;
+            left: 50%;
+            top: 50%;
+            font-family: 'Formula1_Wide', sans-serif;
+            color: #222;
+            transform: skewX(40deg) rotate(270deg);
+            margin-top: -140px;
+            margin-left: -130px;}
+
+
+/* sub001 드라이버 섹션------------------------------ */
+ .driverIntro {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .driverIntro > div {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .driverIntro .oscarIntro {
+            left: 0;
+            top: 0;
+        }
+
+        .driverIntro .oscarIntro .man {
+            width: 500px;
+            z-index: 5;
+            left: 50%;
+            top: 100px;
+            margin-left: -400px;
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.8s ease;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+        }
+
+        /* 호버 효과 추가 */
+        .driverIntro .oscarIntro .man:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 15px 30px rgba(255, 128, 0, 0.3));
+        }
+
+        .driverIntro .oscarIntro .bg {
+            width: 600px;
+            height: 100%;
+            position: absolute;
+            z-index: 4;
+            right: 0;
+            top: 0;
+            object-fit: cover;
+            transition: all 1s ease;
+        }
+
+        /* 배경 이미지 패럴랙스 효과 */
+        .driverIntro.oscar-active .oscarIntro .bg {
+            transform: scale(1.1);
+            filter: brightness(0.7) contrast(1.2);
+        }
+
+        .driverIntro .oscarIntro .sign {
+            width: 500px;
+            height: auto;
+            position: absolute;
+            right: 40px;
+            bottom: 50px;
+            z-index: 5;
+            transform: rotate(-15deg);
+            transition: all 0.8s ease;
+            opacity: 0.8;
+        }
+
+        /* 사인 애니메이션 */
+        .driverIntro.oscar-active .oscarIntro .sign {
+            transform: rotate(-10deg) scale(1.1);
+            opacity: 1;
+            filter: drop-shadow(0 5px 15px rgba(255, 128, 0, 0.5));
+        }
+
+        .driverIntro .oscarIntro .txtnum, 
+        .driverIntro .landoIntro .txtnum {
+            position: absolute;
+            z-index: 5;
+            font-family: 'Formula1_Wide', Arial, sans-serif;
+            color: #FF8000;
+            font-size: 50px;
+            transition: all 0.8s ease;
+            text-shadow: 0 2px 10px rgba(255, 128, 0, 0.5);
+        }
+
+        .driverIntro .oscarIntro .txtnum {
+            transform: rotate(-90deg);
+            right: 0;
+            bottom: 50%;
+            margin-right: -290px;
+            margin-bottom: -150px;
+        }
+
+        /* 번호 발광 효과 */
+        .driverIntro.oscar-active .oscarIntro .txtnum {
+            color: #FFD700;
+            text-shadow: 
+                0 0 10px rgba(255, 128, 0, 0.8),
+                0 0 20px rgba(255, 128, 0, 0.6),
+                0 0 30px rgba(255, 128, 0, 0.4);
+            transform: rotate(-90deg) scale(1.1);
+        }
+
+        .driverIntro .landoIntro .txtnum {
+            transform: rotate(90deg);
+            left: 0;
+            top: 50%;
+            margin-left: -260px;
+            margin-top: -185px;
+        }
+
+        .driverIntro.lando-active .landoIntro .txtnum {
+            color: #C1F406;
+            text-shadow: 
+                0 0 10px rgba(137, 166, 33, 1),
+                0 0 20px rgba(137, 166, 33, 1),
+                0 0 30px rgba(137, 166, 33, 1);
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .driverIntro .landoIntro {
+            right: 0;
+            top: 0;
+        }
+
+        .driverIntro .landoIntro .man {
+            width: 500px;
+            z-index: 5;
+            right: 50%;
+            top: 100px;
+            margin-right: -400px;
+            position: absolute;
+            transform: scaleX(-1);
+            cursor: pointer;
+            transition: all 0.8s ease;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+        }
+
+        .driverIntro .landoIntro .man:hover {
+            transform: scaleX(-1) scale(1.05);
+            filter: drop-shadow(0 15px 30px rgba(137, 166, 33, 1));
+        }
+
+        .driverIntro .landoIntro .bg {
+            width: 600px;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            z-index: 4;
+            left: 0;
+            top: 0;
+            transition: all 1s ease;
+        }
+
+        .driverIntro.lando-active .landoIntro .bg {
+            transform: scale(1.1);
+            filter: brightness(0.7) contrast(1.2);
+        }
+
+        .driverIntro .landoIntro .sign {
+            width: 400px;
+            height: auto;
+            position: absolute;
+            z-index: 5;
+            left: 50px;
+            top: -130px;
+            transform: rotate(-15deg);
+            transition: all 0.8s ease;
+            opacity: 0.8;
+        }
+
+        .driverIntro.lando-active .landoIntro .sign {
+            transform: rotate(-10deg) scale(1.1);
+            opacity: 1;
+            filter: drop-shadow(0 5px 15px rgba(193, 244, 6, 1));
+        }
+
+        /* 클릭 시 파티클 효과를 위한 오버레이 */
+        .click-effect {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FF8000;
+            border-radius: 50%;
+            animation: particle-explosion 1s ease-out forwards;
+        }
+
+        .particle.lando-particle {
+            background: #00D4AA;
+        }
+
+        @keyframes particle-explosion {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0) translate(var(--dx), var(--dy));
+                opacity: 0;
+            }
+        }
+
+    
+        /* 2번째 화면 드라이버 정보 TXT */
+        .driverTxt {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .driverTxt .backNum {position: absolute;
+                            z-index: -1;
+                            opacity: 0.2;
+                            top: 50%;
+                            font-family: 'Formula1_bold', sans-serif;}
+        .driverTxt .oscarTxt .backNum  {left: 50%;
+                            margin-top: -400px;
+                            font-size: 120px;
+                            color: #FF8000;}
+        .driverTxt .landoTxt .backNum  {margin-top: -400px;
+                            right: 50%;
+                            font-size: 120px;
+                            color: #C1F406;}                             
+
+        .driverTxt .oscarTxt, 
+        .driverTxt .landoTxt {
+            width: 40%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            margin-top: -370px;
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            pointer-events: all;
+        }
+
+        .driverTxt .oscarTxt.on, 
+        .driverTxt .landoTxt.on {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .driverTxt .oscarTxt {
+            left: 50%;
+            margin-left: -800px;
+            transform: translateY(30px);
+        }
+
+        .driverTxt .landoTxt {
+            right: 50%;
+            margin-right: -700px;
+            text-align: right;
+            transform: translateY(30px);
+        }
+
+        .driverTxt .oscarTxt .top h2,
+        .driverTxt .landoTxt .top h2 {
+            font-family: 'Formula1_Bold', Arial, sans-serif;
+            font-size: 60px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .driverTxt .oscarTxt .top h2 span {
+            color: #FF8000;
+            text-shadow: 0 0 10px rgba(255, 128, 0, 0.5);
+        }
+
+        .driverTxt .landoTxt .top h2 span {
+            color: #C1F406;
+            text-shadow: 0 0 10px rgba(193, 244, 6, 1);
+        }
+
+        .driverTxt .oscarTxt .top p,
+        .driverTxt .landoTxt .top p {
+            color: #eee;
+            font-size: 15px;
+            margin-bottom: 1px;
+        }
+
+       
+
+        .driverTxt .oscarTxt .mid,
+        .driverTxt .landoTxt .mid {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .driverTxt .oscarTxt .mid h2,
+        .driverTxt .landoTxt .mid h2 {
+            font-family: 'Formula1_Bold', Arial, sans-serif;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .driverTxt .oscarTxt .mid h2 {color: #FF8000;}
+        .driverTxt .landoTxt .mid h2 {color: #C1F406;}
+
+        .driverTxt .landoTxt .mid .chat,.driverTxt .oscarTxt .mid .chat {font-size: 25px;
+                                        font-family: 'Formula1_Bold', Arial, sans-serif;
+                                        margin-bottom: 30px;
+                                        line-height: 1.1;}
+
+
+        .driverTxt .oscarTxt .mid p,
+        .driverTxt .landoTxt .mid p {
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        .driverTxt .oscarTxt .bottom h2,
+        .driverTxt .landoTxt .bottom h2 {
+            font-family: 'Formula1_Bold', Arial, sans-serif;
+            color: #fff;
+        }
+        .driverTxt .oscarTxt .bottom h2 {color: #FF8000;}
+        .driverTxt .landoTxt .bottom h2 {color: #C1F406;}
+
+        .driverTxt .oscarTxt .bottom p,
+        .driverTxt .landoTxt .bottom p {
+            color: #fff;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            border-bottom: 1px solid #eee;
+            margin-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .driverTxt .oscarTxt .bottom p span,
+        .driverTxt .landoTxt .bottom p span {
+            font-weight: bold;
+            font-size: 20px;
+            color: #FF8000;
+        }
+
+        .driverTxt .landoTxt .bottom p span {
+            color: #C1F406;
+        }
+
+        .driverTxt .landoTxt .bottom div {display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                width: 100%; }
+
+        /* 스탯 카운터 애니메이션 */
+        .stat-counter {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .stat-counter.counting {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+
+        /* 배경 애니메이션 */
+        .bg-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .bg-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 128, 0, 0.3);
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+
+
+/* sub002 갤러리섹션########################################################### */
+.gallery {width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+          overflow: hidden;}
+
+.gallery .car {
+    width: 1300px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -670px;
+    margin-top: 150px;
+    
+    /* car 이미지 밖으로 설정 */
+    transform: translateX(-2000px); 
+    transition: transform 1s ease-out;
+}
+
+/* gnb.eq(2) 클릭시 car 이미지 본래 위치로 돌아오는 설정 */
+.gallery .car.active {
+    transform: translateX(0);
+}
+
+
+.gallery .gallBox {
+                  display: flex;
+                  align-items: baseline;
+                  margin-bottom: 100px;}
+.gallery .gallBox>div {
+                      margin-right: 25px;
+                      cursor: pointer;
+                      background-position: center center;
+                          background-repeat: no-repeat;
+                          background-size: cover;
+
+                          position: relative;
+                          overflow: hidden;
+                          transition: transform 0.5s ease;
+                          } 
+
+.gallery .gallBox .gBox1 {width: 250px;
+                          height: 550px;
+                          background-image: url(../img/gallery001.jpg);
+                          position: relative;
+                          }
+                         
+.gallery .gallBox .gBox2 {width: 250px;
+                            height: 600px;
+                          background-image: url(../img/gallery002.jpg);
+                          position: relative;
+                        }
+.gallery .gallBox .gBox3 {width: 250px;
+                            height: 650px;
+                          background-image: url(../img/gallery003.jpg);
+                          position: relative;
+                          }
+.gallery .gallBox .gBox4 {width: 250px;
+                            height: 600px;
+                          background-image: url(../img/gallery004.jpg);
+                          position: relative;
+                          }
+.gallery .gallBox .gBox5 {width: 250px;
+                          height: 550px;
+                        background-image: url(../img/gallery005.jpg);
+                        position: relative;
+                          }
+
+.gallery .gallBox>div:hover {transform: scale(1.1);} 
+/* 투명도를 위한 가상 요소 추가 */
+.gallery .gallBox>div::after {
+     background-color: transparent; 
+    transition: background-color 0.3s ease; 
+    
+}
+
+/* 투명도를 위한 가상 요소 추가 */
+.gallery .gallBox > div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: 1; 
+}
+
+/* 호버 시 가상 요소의 배경색을 반투명하게 변경 (텍스트를 제외하고) */
+.gallery .gallBox>div:hover::after {
+  z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}                         
+
+
+/* 모든 .txt에 공통으로 적용되는 스타일 (위치, 색상, 애니메이션) */
+.gallery .gallBox .txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 중앙 정렬을 위한 올바른 transform 값 */
+    transform: translate(-45%, -25%); 
+    width: 100%;
+    color: #fff;
+    padding: 0 10px; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.gallery .gallBox .txt .order {font-family: 'Formula1_Wide', sans-serif;
+                                font-size: 30px;}
+.gallery .gallBox .txt .title {font-family: 'Formula1_bold', sans-serif;
+                                margin: 5px 0;
+                                font-size: 20px;}
+.gallery .gallBox .txt .date {font-size: 13px;
+                                margin-top: 20px;}
+
+
+.gallery .gallBox .gBox1:hover .txt,
+.gallery .gallBox .gBox2:hover .txt,
+.gallery .gallBox .gBox3:hover .txt,
+.gallery .gallBox .gBox4:hover .txt,
+.gallery .gallBox .gBox5:hover .txt {opacity: 1;}    
+
+
+/* sub003 video 섹션 설정 ############################################################# */
+
+.video {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video .videoBg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video .videoBg img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -590px;
+            margin-left: -533px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .video .youtube {
+            position: relative;
+            width: 100%;
+            height: 400vh; /* 4개 아이템이므로 4배 높이 */
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .video .youtube.no-transition {
+            transition: none;
+        }
+
+        .video .youtube > div {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* 각 아이템은 뷰포트 높이만큼 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video .youtube > div > video {
+            width: 700px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .video .youtube > div > p {
+            position: absolute;
+            font-family: 'Formula1_bold', Arial, sans-serif;
+            font-size: 60px;
+            color: #fff;
+            z-index: 10;
+            left: 50%;
+            top: 50%;
+            margin-left: -650px;
+            margin-top: -130px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            white-space: nowrap;
+        }
+
+        /* 컨트롤 버튼 */
+        .controls {
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .controls button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .controls button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .controls button:active {
+            transform: scale(0.95);
+        }
+
+
+
+        /* 진행 바 */
+        .progress-bar {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b35, #f7931e);
+            width: 25%;
+            transition: width 0.6s ease;
+            border-radius: 2px;
+        }
+
+        /* 슬라이드 번호 */
+        .slide-counter {
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+/* .gnb 클릭시 화면전환시 공통 속성 */
+.wrap,
+.sub001,
+.sub002,
+.sub003 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 개별 속성 */
+.sub001,
+.sub002,
+.sub003 {
+    display: none;
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project003</title>
+    <script src="https://kit.fontawesome.com/08b32d16a8.js" crossorigin="anonymous"></script>
+    <!-- 외부스타일시트 연결 -->
+    <link rel="stylesheet" href="css/1010.css">
+    <link href="undefined" rel="stylesheet" type="text/css" />
+
+    <!-- 자바스크립트 최신 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- 외부스크립트연결 -->
+    <script src="js/1010.js"></script>
+</head>
+
+<body>
+
+    <!-- 로딩스크린-클로드 -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">McLaren</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <h1 class="topLogo">
+        <a><img src="img/logo001.png" alt="logoLeft" class="logoLeft"></a>
+        <a><img src="img/logo002.png" alt="logoRight" class="logoRight"></a>
+    </h1>
+    
+     <header class="header">
+            <ul class="gnb">
+                <li class="on"><a href=""><em>Home</em></a>
+                </li>
+                <li><a href=""><em>Driver</em></a>
+                </li>
+                <li><a href=""><em>Article</em></a>
+                    <ul>
+                        <li><a href=""><em>2025</em></a></li>
+                    </ul>
+                </li>
+                <li><a href=""><em>Video</em></a>
+                    <ul>
+                        <li><a href=""><em>V.20</em></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="driverNum">DRIVER NUM</p>
+            <div class="landNum">
+                <p>No.4</p>
+                <p>No.81</p>
+            </div>
+        </header>
+
+    <div class="wrap">
+        <div class="landingVideo">
+            <div class="landChat">
+                <p class="landTxt001">McLaren <em>/ MCL38</em></p>
+                <p class="landTxt002">Whatever it takes - Never Stop Racing</p>
+            </div>
+            <video src="img/landing001.mp4" loop autoplay muted></video>
+        </div>
+    </div>
+
+
+    <!-- 드라이버 섹션 -->
+    <div class="sub001">
+        <section class="driverIntro">
+            <!-- 배경(파티클) 애니메이션 -->
+            <div class="bg-animation" id="bgAnimation"></div>
+    
+            <!-- 클릭 효과 오버레이 -->
+            <div class="click-effect" id="clickEffect"></div>
+    
+            <div class="oscarIntro">
+                <img src="img/profile001.png" alt="" class="man">
+                <img src="img/profile003.jpg" alt="" class="bg">
+                <img src="img/Oscar_whiteSign.png" alt="" class="sign">
+                <p class="txtnum">Driver No.81</p>
+            </div>
+    
+            <div class="landoIntro">
+                <img src="img/profile002.png" alt="" class="man">
+                <img src="img/profile004.png" alt="" class="bg">
+                <img src="img/lando_whiteSign.png" alt="" class="sign">
+                <p class="txtnum">Driver No.4</p>
+            </div>
+    
+            <section class="driverTxt">
+                <div class="oscarTxt">
+                    <div class="top">
+                        <img src="img/oscarflag.png" alt="">
+                        <h2><span>Oscar</span> Piastri</h2>
+                        <p>Date of Birth ㅣ 06/04/2001</p>
+                        <p>Place of Birth ㅣ Melbourne, Victoria</p>
+                    </div>
+                    <div class="mid">
+                        <p class="chat">"I don’t think there’s any point dwelling on anything longer than you have to."</p>
+                        <h2>About</h2>
+                        <p>Born in Melbourne, just a stone’s throw away from the Australian Grand Prix venue, a young Oscar Piastri’s dreams of one day racing in Formula 1 were ignited by the sport’s star drivers roaring around his local streets, otherwise known as Albert Park.</p> <br>
+                        <p>It was no flash in the pan. In 2024 Piastri proved vital in McLaren securing their first constructors' title since 1998, pushing more experienced team mate Lando Norris all the way and scoring Grand Prix wins in Hungary and Azerbaijan to finish fourth in the driver standings.</p>
+                    </div>
+                    <div class="bottom">
+                        <h2>Career Stats</h2>
+                        <div>
+                            <p>Grand Prix Entered <span class="stat-counter" data-count="62">0</span></p>
+                            <p>Career Points <span class="stat-counter" data-count="713">0</span></p>
+                            <p>Podiums <span class="stat-counter" data-count="24">0</span></p>
+                        </div>
+                    </div>
+                    <p class="backNum">No.81</p>
+                </div>
+    
+                <div class="landoTxt">
+                    <div class="top">
+                        <img src="img/landoflag.png" alt="">
+                        <h2><span>Lando</span> Norris</h2>
+                        <p>Date of Birth ㅣ 13/11/1999</p>
+                        <p>Place of Birth ㅣ Bristol, England</p>
+                    </div>
+                    <div class="mid">
+    
+                        <p class="chat">"I'm ready to bring the fight to everyone."</p>
+                        <h2>About</h2>
+                        <p>Lando Norris may not be named after Star Wars rebel Lando Calrissian - his Mum just liked the moniker - but he has flair and fighting spirit in bountiful supply.</p> <br>
+                        <p>Away from the track, Norris brims with a modest charm and an artistic side sees him design and paint his own race gear as a hobby. The focus for the future is allying artistry and ambition on track as McLaren rely on the promise of youth to take them back to the top.</p> <br>
+                        <p>Norris hopes the downforce will be with him…</p>
+                    </div>
+                    <div class="bottom">
+                        <h2>Career Stats</h2>
+                        <div>
+                            <p>Grand Prix Entered <span class="stat-counter" data-count="85">0</span></p>
+                            <p>Career Points <span class="stat-counter" data-count="892">0</span></p>
+                            <p>Podiums <span class="stat-counter" data-count="31">0</span></p>
+                        </div>
+                    </div>
+                    <p class="backNum">No.04</p>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <div class="sub002">
+        <section class="gallery">
+            <div class="gallBox">
+                <div class="gBox1">
+                    <a href="https://www.formula1.com/en/latest/article/piastri-insists-mclaren-know-how-were-going-to-go-racing-going-forward.1UuXeWO1bEUi5cZ7mOSe5G"
+                        target="_blank">
+                        <div class="txt">
+                            <p class="order">01</p>
+                            <h2 class="title">Oscar Piastri has voiced "trusts" McLaren </h2>
+                            <p>after letting Norris pass <br>
+                                at Monza.</p>
+                            <p class="date">Sep 18, 2025</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gBox2">
+                    <a href="https://autogear.pt/en/lando-norris-shocks-f1-world-winning-championship-is-not-his-top-priority/"
+                        target="_blank">
+                        <div class="txt">
+                            <p class="order">02</p>
+                            <h2 class="title">Shocks F1 World</h2>
+                            <p>Lando Norris: Winning Championship is NOT his top priority!</p>
+                            <p class="date">Sep 23, 2025</p>
+    
+                        </div>
+                    </a>
+                </div>
+                <div class="gBox3">
+                    <a href="https://berawangnews.com/watch-the-f1-surge-mclaren-racing-valued-at-4-1b-com/"
+                        target="_blank">
+                        <div class="txt">
+                            <p class="order">03</p>
+                            <h2 class="title">Watch the F1 surge</h2>
+                            <p>McLaren Racing Valued at <br>$4.1B.</p>
+                            <p class="date">Sep 25, 2025</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gBox4">
+                    <a href="https://www.grandprix247.com/2025/09/25/f1-news-fisichella-2025-f1-title-race-is-close-but-id-like-to-see-norris-win/"
+                        target="_blank">
+                        <div class="txt">
+                            <p class="order">04</p>
+                            <h2 class="title">FISHICELLA : </h2>
+                            <p>Fishicella said : 2025 F1 Title <br> race is close but I'd like to see NORRIS WIN! </p>
+                            <p class="date">Sep 25, 2025</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gBox5">
+                    <a href="https://racingnews365.com/lando-norris-defends-mclaren-despite-key-f1-flaw-being-exposed"
+                        target="_blank">
+                        <div class="txt">
+                            <p class="order">05</p>
+                            <h2 class="title">Defends McLaren</h2>
+                            <p>Lando Norris defends Mclaren despite key F1 flaw being exposed.</p>
+                            <p class="date">Sep 24, 2025</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <img src="img/car001.png" alt="" class="car">
+        </section>
+    </div>
+
+
+
+    <div class="sub003">
+        <section class="video">
+            <div class="videoBg">
+                <img src="img/videoBg.png" alt="">
+                <div class="youtube" id="youtubeSlider">
+                    <div class="youtube001">
+                        <p>WHATEVER <br>IT TAKES</p>
+                        <video muted autoplay loop controls>
+                            <source src="img/movie001.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="youtube002">
+                        <p>JOIN US<br>ON THE TRACK!</p>
+                        <video muted loop controls>
+                            <source src="img/movie002.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="youtube003">
+                        <p>DRIVE <br>MORE FAST</p>
+                        <video muted loop controls>
+                            <source src="img/movie003.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="youtube004">
+                        <p>McLaren <br>TECHNOLOGY <br>CENTER</p>
+                        <video muted loop controls>
+                            <source src="img/movie004.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+    
+                <!-- 컨트롤 버튼 -->
+                <div class="controls">
+                    <button class="upBtn">↑</button>
+                    <button class="downBtn">↓</button>
+                </div>
+    
+    
+                <!-- 진행 바 -->
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+    
+                <!-- 슬라이드 카운터 -->
+                <div class="slide-counter" id="slideCounter">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">4</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

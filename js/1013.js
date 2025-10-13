@@ -190,7 +190,7 @@ $(function () {
             keywords: ["🌊", "🐠", "💙"],
             colors: ["#092170", "#1C43BE", "#FFDA00"],
             colorCodes: ["#092170", "#1C43BE", "#FFDA00"],
-            image: "img/project001_mockup.png",
+            image: "../img/project001_mockup.png",
             mainColor: "#87CEEB",
             conceptImage: "img/project1_preview.png",
             siteUrl: "https://jooyeonglim.github.io/portfolio2025/project001/"
@@ -203,7 +203,7 @@ $(function () {
             keywords: ["🍔", "🍟", "🥤"],
             colors: ["#E2203D", "#F4B618", "#199FDA"],
             colorCodes: ["#E2203D", "#F4B618", "#199FDA"],
-            image: "img/project002_mockup.png",
+            image: "../img/project002_mockup.png",
             mainColor: "#E2203D",
             conceptImage: "img/project2_preview.png",
             siteUrl: "https://jooyeonglim.github.io/portfolio2025/project002/"
@@ -216,7 +216,7 @@ $(function () {
             keywords: ["🏎️", "⚡", "🏆"],
             colors: ["#FF8000", "#222", "#C1F406"],
             colorCodes: ["#FF8000", "#222", "#C1F406"],
-            image: "img/project003_mockup.png",
+            image: "../img/project003_mockup.png",
             mainColor: "#FF8000",
             conceptImage: "img/project3_preview.png",
             siteUrl: "https://jooyeonglim.github.io/portfolio2025/project003/"

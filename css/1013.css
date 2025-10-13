@@ -916,7 +916,7 @@
         .project-image {
             width: 100%;
             height: 350px;
-            background-image: url(img/project001_mockup.png);
+            background-image: url(../img/project001_mockup.png);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;

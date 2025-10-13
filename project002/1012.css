@@ -117,7 +117,11 @@ body {font-size: 15px;
                         background-color: #bbb;
                         background-image: url(img/landing/landing_bg_big.jpg);
                         background-size: cover;
-                        background-position: center center;}
+                        background-position: center center;
+                        position: relative; /* 추가 */
+                        top: 0; /* 추가 */
+                    }
+
 
 .landing .center_b {position: absolute;
                 left: 50%;
@@ -125,17 +129,24 @@ body {font-size: 15px;
                 width: 500px;
                 height: 500px;
                 margin-left: -250px;
-                margin-top: -250px;}                       
+                margin-top: -250px;
+                z-index: 888;}                       
 .landing .center_b img {width: 100%;}                       
 .landing .txt {width: 50%;
                 height: 100%;
                 background-color: #E61433;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;}
-.landing .txt .txtInner {padding-top: 300px;
-                            padding-left: 200px;}
-.landing .txt p {font-size: 15px;}
+                justify-content: flex-start;
+                position: relative;
+                overflow: hidden;}
+.landing .txt .txtInner {padding-top: 400px;
+                            padding-left: 250px;
+                            position: relative;
+                            bottom: 0;}
+.landing .txt p {font-size: 15px;
+                font-weight: bold;
+                color: #222;}
 .landing .txt h2 {font-size: 30px;
                 padding-bottom: 5px;
                 color: #fff;}
@@ -403,6 +414,7 @@ body {font-size: 15px;
                         background-image: url(img/group/group_topline.png);
                         background-repeat: repeat-x;
                         background-position: top;
+                        background-size: contain;
                         }
 
 .groupBox .inner {width: 80%;
@@ -506,6 +518,7 @@ body {font-size: 15px;
         background-image: url(img/group/group_bottomline.png);
         background-repeat: repeat-x;
         background-position: bottom;
+        background-size: contain;
         }
 .groupBox .inner .left ul:nth-child(1) {top: 0;
                                         animation: ani1 12s linear infinite;
@@ -1462,7 +1475,7 @@ text-align: center;
             background-color: #404040;
             padding: 20px;
             border-radius: 8px;
-            margin-top: auto;
+            margin-top: 0px;
         }
 
         .cart_total p {
@@ -1530,6 +1543,129 @@ text-align: center;
             font-size: 12px;
             color: #666;
         }
+
+       /* 장바구니 아이템 개별 스타일 추가 */
+.cart_item {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr 0.5fr;
+    gap: 10px;
+    padding: 15px 10px;
+    background-color: #404040;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.cart_item .product_info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.cart_item .product_info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+.cart_item .product_name {
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.cart_item .option,
+.cart_item .price {
+    text-align: center;
+    font-size: 13px;
+    color: #ddd;
+}
+
+.cart_item .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.cart_item .quantity button {
+    background-color: #E2203D;
+    border: none;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.cart_item .quantity button:hover {
+    background-color: #199FDA;
+    transform: scale(1.1);
+}
+
+.cart_item .quantity span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.cart_item .remove_item {
+    background-color: #555;
+    border: none;
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    transition: all 0.2s;
+}
+
+.cart_item .remove_item:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+/* 장바구니 아이템 영역 스크롤 설정 */
+.cart_items {
+    max-height: calc(100vh - 450px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
+}
+
+/* 스크롤바 스타일링 */
+.cart_items::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cart_items::-webkit-scrollbar-thumb {
+    background-color: #E2203D;
+    border-radius: 10px;
+}
+
+.cart_items::-webkit-scrollbar-track {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.cart_items::-webkit-scrollbar-thumb:hover {
+    background-color: #c01a2f;
+}
+
+/* 합계 금액 강조 */
+.cart_total p:last-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFD447;
+}
 
 
 

@@ -211,7 +211,7 @@ $(function () {
         3: {
             title: "McLaren",
             headerTitle: "McLaren",
-            subtitle: "프리미엄 자동차 브랜드 사이트",
+            subtitle: "F1 드라이버 인물형 웹사이트",
             description: "맥라렌의 <strong>역동적인 퍼포먼스와 럭셔리함을</strong><br>웹에서 경험할 수 있도록 디자인했습니다.<br>혁신적인 기술과 우아한 디자인이 조화를 이룹니다.",
             keywords: ["🏎️", "⚡", "🏆"],
             colors: ["#FF8000", "#222", "#C1F406"],

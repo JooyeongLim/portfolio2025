@@ -193,7 +193,6 @@ $(function () {
             image: "img/project001_mockup.png",
             mainColor: "#87CEEB",
             conceptImage: "img/project1_preview.png",
-            siteUrl: "https://jooyeonglim.github.io/portfolio2025/project001/"
         },
         2: {
             title: "Wendy's",
@@ -321,6 +320,8 @@ $(function () {
                 .css("display", "flex")      // display: flex를 강제 적용하여 중앙 정렬 활성화
                 .animate({ opacity: 1 }, 300); // opacity만 애니메이션하여 fade-in 효과 구현
 
+             // 🚨 여기에 추가됨! 모달 콘텐츠 스크롤을 맨 위로 초기화
+            $(".modal-content").scrollTop(0);
             // 스크롤 방지
             $("html").css("overflow", "hidden");
         });
@@ -360,6 +361,25 @@ $(function () {
             }
         });
     });
+    // 🚨 두 번째 버튼 클릭 이벤트: 지정된 웹사이트로 이동
+        $(".project-buttons").on("click", ".project-btn:last-child", function () {
+            // 현재 활성화된 프로젝트 카드에서 data-project 값을 가져옴
+            const activeProjectNum = $(".project-card.active").data("project");
+            const data = projectData[activeProjectNum];
+
+            // Daejeon Aquarium (프로젝트 1)인 경우 준비중 메시지 표시
+            if (activeProjectNum === 1) {
+                alert("준비중입니다.");
+                return; // 함수 종료하여 새 창 열기 방지
+            }
+
+            // 다른 프로젝트들은 정상적으로 새 창에서 열기
+            if (data && data.siteUrl) {
+                window.open(data.siteUrl, '_blank');
+            } else {
+                console.warn("Project URL not found for project: " + activeProjectNum);
+            }
+        });
     $(document).ready(function () {
 
         // ... (기존의 첫 번째 버튼 - 컨셉뷰 팝업 열기 로직) ...
